@@ -1,0 +1,7 @@
+1,Rossi,Valentino,4
+2,Bofelli,Alberto,6
+3,Baudo,Pippo,2
+4,Graziani,Ivan,1
+5,Carrà,Raffaella,3
+6,Parodi,Benedetta,5
+7,Bianchi,Simone,5
