@@ -2,6 +2,7 @@ package com.betcaom.thread.attivita;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import dto.Pianificazione;
@@ -15,8 +16,8 @@ public class MainAttivita extends Utilities implements Runnable {
 
 	public void startAttivita() {
 		
-		final String attivitàPath = "C:\\Users\\Betacom\\Downloads\\projectAzienda\\attività.txt";
-		final String istruttoriPath = "C:\\Users\\Betacom\\Downloads\\projectAzienda\\istruttori.txt";
+		final String attivitàPath = "C:\\Users\\Betacom\\Documents\\GitHub\\accademy\\projectThread\\src\\com\\betcaom\\thread\\attivita\\attività.txt";
+		final String istruttoriPath = "C:\\Users\\Betacom\\Documents\\GitHub\\accademy\\projectThread\\src\\com\\betcaom\\thread\\attivita\\istruttori.txt";
 		List<String> input;
 		List<Attività> att;
 		input = readLine(attivitàPath);
@@ -89,6 +90,20 @@ public class MainAttivita extends Utilities implements Runnable {
 
 	@Override
 	public void run() {
+		
+		Random rand = new Random();
+		System.out.println("******************partito thread Azienda************************");
+		
+		try {
+			Thread.sleep(rand.nextInt(1000, 1700));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		startAttivita();
+		
+		System.out.println("******************finito thread Azienda************************");
+
 	}
 }
