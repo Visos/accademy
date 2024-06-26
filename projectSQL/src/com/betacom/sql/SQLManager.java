@@ -53,6 +53,23 @@ public class SQLManager {
 		}
 	}
 	
+
+	
+	public List<Map<String, Object>> list(Connection con, String qry) {
+		try {
+			PreparedStatement cmd = con.prepareStatement(qry);
+								
+			ResultSet res = cmd.executeQuery();	
+			
+			return resultSetList(res);
+			
+		}  catch ( Exception e) {
+			System.out.println("error found in list: " + e.getMessage());
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
 	public List<Map<String, Object>> list(Connection con, String qry, Map<Integer, Object> params) {
 		try {
 			PreparedStatement cmd = con.prepareStatement(qry);
@@ -70,6 +87,68 @@ public class SQLManager {
 		
 		return null;
 	}
+	
+	
+	public Map<String, Object> get(Connection con, String qry, Map<Integer, Object> params) {
+		try {
+			
+			PreparedStatement cmd = con.prepareStatement(qry);
+			
+			cmd = createSet(cmd, params);
+					
+			ResultSet res = cmd.executeQuery();
+
+			
+			return resultSet(res);
+			
+		}  catch ( Exception e) {
+			System.out.println("error found in list: " + e.getMessage());
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	
+	
+	
+	
+	public long count(Connection con, String qry) {
+		try {
+			String countqry = "select count(*) as total from (" + qry + ") as numero";
+			PreparedStatement cmd = con.prepareStatement(countqry);
+			ResultSet res = cmd.executeQuery();	
+			
+			res.next();
+			return (Long)res.getObject("total");
+			
+		}  catch ( Exception e) {
+			System.out.println("error found in list: " + e.getMessage());
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+	
+	public long count(Connection con, String qry, Map<Integer, Object> params) {
+		try {
+			
+			String countqry = "select count(*) from " + qry + "as numero";
+			PreparedStatement cmd = con.prepareStatement(countqry);
+			cmd = createSet(cmd, params);
+			ResultSet res = cmd.executeQuery();	
+			
+			res.next();
+			return (Long)res.getObject("numero");
+			
+		}  catch ( Exception e) {
+			System.out.println("error found in list: " + e.getMessage());
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+
 
 	private PreparedStatement createSet(PreparedStatement cmd, Map<Integer, Object> params) {
 		params.entrySet().forEach(s -> {
@@ -94,10 +173,21 @@ public class SQLManager {
 			}
 			rows.add(row);
 		}
-		
 		return rows;
-		
 	}
+	
+	private Map<String , Object> resultSet(ResultSet rs) throws SQLException{
+		ResultSetMetaData md = rs.getMetaData();
+		Map<String , Object> map = new HashMap<String , Object>();
+		
+		while(rs.next()) {
+			map.put(md.getColumnName(1), rs.getObject(1));		//errore column index out of range
+
+		}
+		return map;
+	}
+	
+	
 	
 	public int insert(Connection con, String qry, Map<Integer, Object> params) {
 		int rc = 0;

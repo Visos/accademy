@@ -33,7 +33,7 @@ public class ProcessUpdate extends DBUtilities  implements SQLProcess{
 		System.out.println("After insert rc: " + rc);
 		
 		sql = "select * from dbprova.dipendenti";
-		List<Dipendenti> lD = transformResultInDTO(db.list(con, sql, new HashMap<Integer, Object>()));		
+		List<Dipendenti> lD = transformResultInDTO(db.list(con, sql));		
 
 		lD.forEach(d -> System.out.println(d));
 		
@@ -51,8 +51,11 @@ public class ProcessUpdate extends DBUtilities  implements SQLProcess{
 		rc = db.update(con, sql, params);
 		System.out.println("*******************DOPO UPDATE*******************" + rc);
 		
+
+
+		
 		sql = "select * from dipendenti";
-		lD = transformResultInDTO(db.list(con, sql,  new HashMap<Integer, Object>()));
+		lD = transformResultInDTO(db.list(con, sql));
 		lD.forEach(d -> System.out.println(d));
 
 		
@@ -78,7 +81,7 @@ public class ProcessUpdate extends DBUtilities  implements SQLProcess{
 		System.out.println("*******************DOPO delete*******************" + rc);
 		
 		sql = "select * from dipendenti";
-		lD = transformResultInDTO(db.list(con, sql, new HashMap<Integer, Object>()));
+		lD = transformResultInDTO(db.list(con, sql));
 		lD.forEach(d -> System.out.println(d));
 	}
 }

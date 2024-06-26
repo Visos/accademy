@@ -38,5 +38,18 @@ public class DBUtilities {
 		
 	}
 	
+	public Dipendenti transformResultInDTO(Map<String, Object> map){
+		return new Dipendenti(
+						(Integer) map.get("id_user"),
+						map.get("nome").toString(),
+						map.get("cognome").toString(),
+						(Date) map.get("data_assunzione"),
+						map.get("telefono").toString(),
+						map.get("mansione").toString(),
+						(BigDecimal) map.get("stipendio"),
+						(Integer) map.get("id_ufficio"));
+		
+	}
+	
 
 }

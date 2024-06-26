@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 import com.betacom.sql.dao.Dipendenti;
 import com.betacom.sql.utilities.DBUtilities;
+import com.mysql.cj.jdbc.result.ResultSetMetaData;
 
 
 
@@ -41,9 +42,32 @@ public class ProcessQuery extends DBUtilities implements SQLProcess{
 		System.out.println("************************");
 		
 		qry = "select * from dipendenti";
-		lD = transformResultInDTO(db.list(con, qry, new HashMap<Integer, Object>()));		
-
+		lD = transformResultInDTO(db.list(con, qry));		
 		lD.forEach(d -> System.out.println(d));
+		System.out.println("************************");
+		
+		
+
+		//count brutto
+		qry = "select count(*) as numero from dipendenti";
+		List<Map<String, Object>> resultCount = db.list(con, qry);
+		System.out.println("size: " + resultCount.size() + " numero: " + resultCount.get(0).get("numero"));
+
+
+		qry = "select * from dipendenti";
+
+		long number = db.count(con, qry);
+		System.out.println("count bello:" + number);
+		
+		
+		//-------MIA GET SENZA LIST------
+		System.out.println("NELLA GET********");
+		qry = "select nome from dipendenti where id_user = 4";
+		Map<String, Object> resultGet =db.get(con, qry, new HashMap<Integer, Object>());
+		System.out.println("prova daje: " + resultGet.get("nome"));
+		
+		System.out.println("FUORI GET*******");
+		
 
 		
 	}
