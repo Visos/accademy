@@ -1,24 +1,29 @@
-package com.betacom.sql;
+package com.betacom;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+import com.betacom.config.SQLConfiguration;
+import com.betacom.exception.SQLAcademyException;
+import com.mysql.cj.x.protobuf.MysqlxPrepare.Prepare;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.betacom.sql.config.SQLConfiguration;
-import com.betacom.sql.exception.SQLAcademyException;
-
 import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 
 
 public class SQLManager {
 	
+	private ArrayList<String> arrayList;
+
 	public Connection initSQL () {
 		Connection con = null;
 
@@ -46,7 +51,7 @@ public class SQLManager {
 		return con;	
 	}
 	
-	
+	// ---------DA FARE
 	public Connection transaction () {
 		
 		Connection con = null;
@@ -73,6 +78,7 @@ public class SQLManager {
 		
 		return con;	
 	}
+	
 	
 	public void listOfTable(Connection con, String dbName) {
 		
@@ -224,14 +230,19 @@ public class SQLManager {
 	
 	
 	
-	public int insert(Connection con, String qry, Map<Integer, Object> params) {
+	public int insertMacchina(Connection con, Map<Integer, Object> params) {
 		int rc = 0;
 		try {
-			PreparedStatement cmd = con.prepareStatement(qry);
-			
+			System.out.println("pramas: " + params);
+
+
+			PreparedStatement cmd = con.prepareStatement(SQLConfiguration.getInstance().getInsertMacchina());
+			System.out.println("CMD" + cmd);
+
 			cmd = createSet(cmd, params);
+
 			rc = cmd.executeUpdate();
-			
+						
 		} catch (Exception e) {
 			System.out.println("insert error: " + e.getMessage());		
 		}
@@ -239,12 +250,44 @@ public class SQLManager {
 		return rc;
 	}
 	
-	public int update(Connection con, String qry, Map<Integer, Object> params) {
+	public int insertVeicolo(Connection con, Map<Integer, Object> params) {
 		int rc = 0;
 		try {
+			System.out.println("pramas: " + params);
+
+
+			PreparedStatement cmd = con.prepareStatement(SQLConfiguration.getInstance().getInsertVeicolo());
+			System.out.println("CMD" + cmd);
+
+			cmd = createSet(cmd, params);
+			
+			System.out.println("CMD VEICOLO : " + cmd);
+
+			rc = cmd.executeUpdate();
+						
+		} catch (Exception e) {
+			System.out.println("insert error: " + e.getMessage());		
+		}
+		
+		return rc;
+	}
+	
+	public int update(Connection con, Map<Integer, Object> params) {
+		int rc = 0;
+		try {
+			
+			String qry = SQLConfiguration.getInstance().getUpdate();
+			
+			qry = qry.replaceAll("!", params.get(3).toString());
+			params.remove(3);
+			
+			System.out.println("QRY: " + params);
+			
 			PreparedStatement cmd = con.prepareStatement(qry);
 			
 			cmd = createSet(cmd, params);
+			System.out.println("CMD" + cmd);
+
 			rc = cmd.executeUpdate();
 			
 		} catch (Exception e) {
@@ -254,10 +297,10 @@ public class SQLManager {
 		return rc;
 	}
 	
-	public int delete(Connection con, String qry, Map<Integer, Object> params) {
+	public int delete(Connection con, Map<Integer, Object> params) {
 		int rc = 0;
 		try {
-			PreparedStatement cmd = con.prepareStatement(qry);
+			PreparedStatement cmd = con.prepareStatement(SQLConfiguration.getInstance().getDelete());
 			
 			cmd = createSet(cmd, params);
 			rc = cmd.executeUpdate();
@@ -291,4 +334,46 @@ public class SQLManager {
 		
 	}
 	
+	
+	public List<Map<String, Object>> select(Connection con) {
+		try {
+			PreparedStatement cmd = con.prepareStatement(SQLConfiguration.getInstance().getSelect());
+								
+			ResultSet res = cmd.executeQuery();	
+			
+			return resultSetList(res);
+			
+		}  catch ( Exception e) {
+			System.out.println("error found in select: " + e.getMessage());
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	public void increase(Connection con ,Map<Integer, Object> params) {
+
+		String qry = "update dbcar.contatore set contatore = contatore + 1 where id = ?";
+		try {
+			PreparedStatement cmd = con.prepareStatement(qry);
+			cmd = createSet(cmd, params);
+			cmd.execute();
+		} catch (SQLException e) {
+			System.out.println("error found in increase: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
+	public void decrease(Connection con ,Map<Integer, Object> params) {
+
+		String qry = "update dbcar.contatore set contatore = contatore - 1 where id = ?";
+		try {
+			PreparedStatement cmd = con.prepareStatement(qry);
+			cmd = createSet(cmd, params);
+			cmd.execute();
+		} catch (SQLException e) {
+			System.out.println("error found in increase: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
 }

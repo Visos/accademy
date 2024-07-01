@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.betacom.sql.config.SQLConfiguration;
 import com.betacom.sql.dao.Dipendenti;
 import com.betacom.sql.utilities.DBUtilities;
 import com.mysql.cj.jdbc.result.ResultSetMetaData;
@@ -20,8 +21,9 @@ public class ProcessQuery extends DBUtilities implements SQLProcess{
 
 	@Override
 	public void execute() {
-		String dbURL = "jdbc:mysql://localhost:3306/dbprova";	
-		Connection con = db.initSQL(dbURL, "root", "DataBase.345");
+		
+		
+		Connection con = db.initSQL();
 		System.out.println("after connection to db");
 		
 		db.listOfTable(con, "dbprova");
@@ -62,9 +64,13 @@ public class ProcessQuery extends DBUtilities implements SQLProcess{
 		
 		//-------MIA GET SENZA LIST------
 		System.out.println("NELLA GET********");
-		qry = "select nome from dipendenti where id_user = 4";
+		qry = "select * from dipendenti where id_user = 4";
 		Map<String, Object> resultGet =db.get(con, qry, new HashMap<Integer, Object>());
-		System.out.println("prova daje: " + resultGet.get("nome"));
+		System.out.println(resultGet);
+		
+		Dipendenti d = transformResultInDipendente(resultGet);
+		System.out.println("ciao");
+		System.out.println("prova daje: " + d.toString());
 		
 		System.out.println("FUORI GET*******");
 		

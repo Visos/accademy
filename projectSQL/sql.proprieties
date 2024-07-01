@@ -1,0 +1,7 @@
+url = jdbc:mysql://localhost:3306/dbprova
+user = root
+pwd = DataBase.345
+driver = com.mysql.cj.jdbc.Driver
+
+
+qry-dipendente=select*from dipendenti where mansione =?

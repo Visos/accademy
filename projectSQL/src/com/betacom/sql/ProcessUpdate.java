@@ -13,9 +13,9 @@ public class ProcessUpdate extends DBUtilities  implements SQLProcess{
 	
 	@Override
 	public void execute() {
-		String dbURL = "jdbc:mysql://localhost:3306/dbprova";	
-		Connection con = db.initSQL(dbURL, "root", "DataBase.345");
-		System.out.println("after connection to db");;
+
+		Connection con = db.initSQL();
+		System.out.println("after connection to db");
 		
 		String sql = "insert into dipendenti (nome, cognome, data_assunzione, telefono, mansione, stipendio) values"
 				+ "	(? , ? , ?, ? , ? , ?)";
