@@ -28,7 +28,7 @@ public class ProcessDelete extends DBUtilities{
 		try {
 			req.checkDelete(allParam);
 		} catch (SQLAcademyException e) {
-			System.out.println();	
+			System.out.println(e.getMessage());	
 			e.printStackTrace();
 		}
 		

@@ -9,6 +9,8 @@ driver = com.mysql.cj.jdbc.Driver
 
 slct = select  * from dbcar.veicolo v left join dbcar.macchina m on v.id_macchina = v.id union  select  * from  dbcar.veicolo v right join dbcar.macchina m on v.id_macchina = v.id
 
+
+
 insm = insert into dbcar.macchina (id, numero_porte , targa) values (?, ?, ?)
 insv = insert into dbcar.veicolo (id_tipo_alimentazione, id_code_colore, id_code_tipo, numero_ruote, numero_posti, id_code_marca, id_macchina)\
 values ( ?, ? ,?, ?, ?, ?, ?)

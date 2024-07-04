@@ -223,7 +223,7 @@ public class SQLManager {
 
 		rs.next();
 		for(int i = 1; i<=column; ++i) {
-			map.put(md.getColumnName(i), rs.getObject(i));
+			map.put(md.getColumnLabel(i), rs.getObject(i));
 		}
 		return map;
 	}

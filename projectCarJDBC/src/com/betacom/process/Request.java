@@ -6,6 +6,11 @@ import com.betacom.exception.SQLAcademyException;
 
 public class Request {
 
+	public void check(List<String> l) throws SQLAcademyException{
+		
+		
+		
+	}
 	
 	public void checkDelete(List<String> l) throws SQLAcademyException {
 		
@@ -18,5 +23,17 @@ public class Request {
 		}else if( ! (l.get(1) instanceof String)) {
 			throw new SQLAcademyException("Id della delete deve essere un numero");
 		}
+	}
+	
+	public void checkInsertVeicolo (List<String> l) throws SQLAcademyException {
+		if (l.size()<9) {
+			throw new SQLAcademyException("Parametri insert non sufficieni");
+		}
+	}
+	
+	
+	
+	public void checkUpdate(List<String> l) throws SQLAcademyException{
+		
 	}
 }
