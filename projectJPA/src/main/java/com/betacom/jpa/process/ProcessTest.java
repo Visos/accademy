@@ -45,12 +45,12 @@ public class ProcessTest {
 		
 
 
-		socioProcess();
-		certificatoProcess();
-		createAbbonamento("09/05/2024", idS.get(0));
-		createAbbonamento("02/06/2024", idS.get(0));
-		listSocio();
-		listCertificato();
+//		socioProcess();
+//		certificatoProcess();
+//		createAbbonamento("09/05/2024", idS.get(0));
+//		createAbbonamento("02/06/2024", idS.get(0));
+//		listSocio();
+//		listCertificato();
 
 
 
@@ -58,11 +58,11 @@ public class ProcessTest {
 		//removeSocio(idS.get(1));
 		//updateSocio(idS.get(2), "gino", "postino");
 		
-		listSocio();
+//		listSocio();
 		
 		
-		log.info("size ida: " + idA.size());
-		createAbboAtti(idA.get(0), new String[] {"Yoga", "Karate"});
+		//log.info("size ida: " + idA.size());
+		//createAbboAtti(idA.get(0), new String[] {"Yoga", "Karate"});
 		
 //		createAttivita("Yoga");
 //		createAttivita("Zumba");
@@ -83,6 +83,8 @@ public class ProcessTest {
 //		p.add("Bianchi");		
 //		List<SocioDTO> sCI = socioS.serachCognomi(p);
 //		sCI.forEach(s->System.out.println("Lista dei cognomi: " + s.toString()));
+		
+		listSocioLike("o");
 
 		
 
@@ -226,6 +228,19 @@ public class ProcessTest {
 	private void removeAttivita(String attivita) {
 		
 	}
+	
+	private void listSocioLike(String pattern) {
+		List<SocioDTO>  lC =socioS.serachCognomiLike(pattern);
+		lC.forEach(s-> log.info(s.toString()));
+		
+	}
+	
+	private void listSocioAttivita(String attivita) {
+		List<SocioDTO>  lC =socioS.serachByAttivita(attivita);
+		lC.forEach(s-> log.info(s.toString()));
+		
+	}
+
 
 	
 }

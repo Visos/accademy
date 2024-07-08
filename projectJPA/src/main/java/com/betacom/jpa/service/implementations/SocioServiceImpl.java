@@ -14,6 +14,7 @@ import com.betacom.jpa.dto.AbbonamentoDTO;
 import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.pojo.Abbonamento;
+import com.betacom.jpa.pojo.Attivita;
 import com.betacom.jpa.pojo.Socio;
 import com.betacom.jpa.process.ProcessTest;
 import com.betacom.jpa.repository.ISocioRepository;
@@ -116,9 +117,29 @@ public class SocioServiceImpl implements ISocioService{
 						a.getSocio().getId()
 						)).collect(Collectors.toList());
 	}
+
+	@Override
+	public List<SocioDTO> serachCognomiLike(String patter) {
+		List<Socio> ls = socioR.findByCognomeLike(patter);
+		for(Socio s: ls) {
+			for(Abbonamento abb : s.getAbbonamenti()) {
+				for(Attivita att : abb.getAttivita()) {
+					if(att.getDescrizione().equalsIgnoreCase("yoga")) {
+						//TO DO add to response
+					}
+				}
+			}
+			
+		}
+		return transformInListDTO(ls);
+	}
+
+	@Override
+	public List<SocioDTO> serachByAttivita(String attivita) {
+		List<Socio> ls = socioR.findByAttivita(attivita);
+		return transformInListDTO(ls);
+	}
 	
-//	private List<SocioDTO> transformInListDTO (List<Socio> resp){
-//		
-//	}
+
 
 }

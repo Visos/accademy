@@ -10,6 +10,9 @@ public interface ISocioService {
 	List<SocioDTO> listAllSocio();
 	List<SocioDTO> serachCognome(String cognome);
 	List<SocioDTO> serachCognomi(List<String> cognomi);
+	List<SocioDTO> serachCognomiLike(String patter);
+	List<SocioDTO> serachByAttivita(String patter);
+
 	void removeSocio(SocioDTO socio) throws AcademyException;
 	void updateSocio(SocioDTO s)throws AcademyException;
 }
