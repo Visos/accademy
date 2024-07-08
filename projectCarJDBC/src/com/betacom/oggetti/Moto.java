@@ -1,6 +1,8 @@
 package com.betacom.oggetti;
 
-public class Moto extends Veicolo{
+
+
+public class Moto{
 
 	private String Targa;
 	private Integer cc;
@@ -8,9 +10,7 @@ public class Moto extends Veicolo{
 
 	
 	
-	public Moto(Integer id, Integer tipoAlimentazione, Integer colore, String tipoVeicolo, Integer numeroRuote,
-			Integer nPosti, Integer marca, String targa, Integer cc) {
-		super(id, tipoAlimentazione, colore, tipoVeicolo, numeroRuote, nPosti, marca);
+	public Moto(String targa, Integer cc) {
 		Targa = targa;
 		this.cc = cc;
 	}

@@ -1,6 +1,8 @@
 package com.betacom.jpa.pojo;
 
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -8,6 +10,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -24,6 +28,21 @@ public class Abbonamento {
 	@ManyToOne
 	@JoinColumn(name = "id_socio")
 	private Socio socio;
+	
+	@ManyToMany	(fetch = FetchType.EAGER)
+	@JoinTable(name = "abbonamento_attivita",
+				joinColumns = @JoinColumn(name = "abbonamento_id"),
+				inverseJoinColumns = @JoinColumn(name = "attivita_id")
+	)
+	private List<Attivita> attivita;
+
+	public List<Attivita> getAttivita() {
+		return attivita;
+	}
+
+	public void setAttivita(List<Attivita> attivita) {
+		this.attivita = attivita;
+	}
 
 	public Integer getId() {
 		return id;

@@ -9,11 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.betacom.jpa.dto.AbbonamentoDTO;
+import com.betacom.jpa.dto.AttivitaDTO;
 import com.betacom.jpa.dto.CertificatoDTO;
 import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.pojo.Certificato;
+import com.betacom.jpa.request.AbbonamentoAttivitaRequest;
 import com.betacom.jpa.service.interfaces.IAbbonamentoService;
+import com.betacom.jpa.service.interfaces.IAttivitaService;
 import com.betacom.jpa.service.interfaces.ICertificatoService;
 import com.betacom.jpa.service.interfaces.ISocioService;
 
@@ -29,29 +32,43 @@ public class ProcessTest {
 	@Autowired
 	private IAbbonamentoService abboS;
 	
+	@Autowired
+	private IAttivitaService attS;
+	
 	public static Logger log = LoggerFactory.getLogger(ProcessTest.class);
 	public static List<Integer> idC = new ArrayList<Integer>();
 	public static List<Integer> idS = new ArrayList<Integer>();
+	public static List<Integer> idA = new ArrayList<Integer>();
+
 	
 	public void createNewSocio() {
 		
 
 
-		//socioProcess();
-		//certificatoProcess();
-		
-		listSocio();
-		listCertificato();
+		socioProcess();
+		certificatoProcess();
 		createAbbonamento("09/05/2024", idS.get(0));
 		createAbbonamento("02/06/2024", idS.get(0));
+		listSocio();
+		listCertificato();
+
 
 
 		//removeCertificato(idC.get(0));
 		//removeSocio(idS.get(1));
-		updateSocio(idS.get(2), "gino", "postino");
+		//updateSocio(idS.get(2), "gino", "postino");
 		
 		listSocio();
 		
+		
+		log.info("size ida: " + idA.size());
+		createAbboAtti(idA.get(0), new String[] {"Yoga", "Karate"});
+		
+//		createAttivita("Yoga");
+//		createAttivita("Zumba");
+//		createAttivita("Karate");
+//		createAttivita("Nuoto");
+//		createAttivita("Judo");
 
 		
 
@@ -182,6 +199,7 @@ public class ProcessTest {
 			AbbonamentoDTO inp = new AbbonamentoDTO();
 			inp.setDataIscrizione(data);
 			inp.setSocioID(socioID);
+			idA.add(abboS.create(inp));
 			abboS.create(inp);
 		} catch (AcademyException e) {
 			log.error("errore in creazione abbonamento: "+ socioID + " error " + e.getMessage());
@@ -189,6 +207,26 @@ public class ProcessTest {
 		}
 		
 	}
+	
+	private void createAttivita(String attivita) {
+		attS.create(new AttivitaDTO(attivita));
+		
+	}
+	
+	private void createAbboAtti(Integer abbonamento, String[] attivita) {
+		AbbonamentoAttivitaRequest req = new AbbonamentoAttivitaRequest(abbonamento, attivita);
+		try {
+			abboS.createAttivita(req);
+
+		} catch (Exception e) {
+			log.error("erroe creazione attivita debtro abbonamento" + e.getMessage());		
+		}
+	}
+	
+	private void removeAttivita(String attivita) {
+		
+	}
+
 	
 }
 
