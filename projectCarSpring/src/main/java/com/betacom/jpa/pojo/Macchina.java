@@ -24,4 +24,6 @@ public class Macchina {
 
 	@OneToOne(mappedBy = "macchina")
 	private Veicolo veicolo;
+	
+	
 }

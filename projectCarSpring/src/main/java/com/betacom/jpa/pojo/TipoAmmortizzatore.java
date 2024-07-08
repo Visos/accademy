@@ -26,6 +26,32 @@ public class TipoAmmortizzatore {
 			mappedBy = "sospensioni",
 			fetch = FetchType.EAGER)
 	private List<Bici> biciclette;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public List<Bici> getBiciclette() {
+		return biciclette;
+	}
+
+	public void setBiciclette(List<Bici> biciclette) {
+		this.biciclette = biciclette;
+	}
+	
+	
 	
 
 }

@@ -42,7 +42,6 @@ public class Socio {
 	@OneToMany(
 			mappedBy = "socio",
 			fetch = FetchType.EAGER)		//eager: carica tutti gli abbonamenti associati - eager: li carica solo ru richiesta
-	
 	private List<Abbonamento> abbonamenti;
 	
 	

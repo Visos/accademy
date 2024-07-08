@@ -85,6 +85,8 @@ public class ProcessTest {
 //		sCI.forEach(s->System.out.println("Lista dei cognomi: " + s.toString()));
 		
 		listSocioLike("o");
+		listSocioAttivita("yoga");
+		
 
 		
 

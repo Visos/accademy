@@ -38,8 +38,9 @@ public class Veicolo {
 	@Column
 	private Integer nPosti;
 	
-	@Column
-	private Integer marca;
+	@ManyToOne
+	@JoinColumn(name = "marca")
+	private TipoMarca marca;
 //	
 //	@JoinColumn( name = "id_bici")
 //	private Integer idBici;
@@ -72,7 +73,7 @@ public class Veicolo {
 	
 
 	public Veicolo(Integer id, TipoAlimentazione tipoAlimentazione, TipoColore colore, TipoVeicolo tipoVeicolo, Integer numeroRuote,
-			Integer nPosti, Integer marca) {
+			Integer nPosti, TipoMarca marca) {
 		super();
 		Id = id;
 		this.tipoAlimentazione = tipoAlimentazione;
@@ -132,11 +133,11 @@ public class Veicolo {
 		this.nPosti = nPosti;
 	}
 
-	public Integer getMarca() {
+	public TipoMarca getMarca() {
 		return marca;
 	}
 
-	public void setMarca(Integer marca) {
+	public void setMarca(TipoMarca marca) {
 		this.marca = marca;
 	}
 	
