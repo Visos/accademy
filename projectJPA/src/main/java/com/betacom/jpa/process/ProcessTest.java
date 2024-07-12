@@ -91,40 +91,40 @@ public class ProcessTest {
 
 	}
 	
-	private void socioProcess() throws AcademyException {
-		log.debug("Beigin create socio");
-
-		
-		SocioDTO input = new SocioDTO();
-		input.setcFiscale("234567898765");
-		input.setCognome("Verdi");
-		input.setNome("Gianni");
-		
-		idS.add(socioS.createSocio(input));
-		
-		input = new SocioDTO();
-		input.setcFiscale("234590898765");
-		input.setCognome("Rossi");
-		input.setNome("Paolo");
-		
-		idS.add(socioS.createSocio(input));
-		
-		input = new SocioDTO();
-		input.setcFiscale("847528202");
-		input.setCognome("Bianchi");
-		input.setNome("alberto");
-		
-		idS.add(socioS.createSocio(input));
-		
-		input = new SocioDTO();
-		input.setcFiscale("546378922");
-		input.setCognome("Vianello");
-		input.setNome("Gino");
-		
-		idS.add(socioS.createSocio(input));
-		log.debug("After create");
-		
-	}
+//	private void socioProcess() throws AcademyException {
+//		log.debug("Beigin create socio");
+//
+//		
+//		SocioDTO input = new SocioDTO();
+//		input.setcFiscale("234567898765");
+//		input.setCognome("Verdi");
+//		input.setNome("Gianni");
+//		
+////		idS.add(socioS.createSocio(input));
+//		
+//		input = new SocioDTO();
+//		input.setcFiscale("234590898765");
+//		input.setCognome("Rossi");
+//		input.setNome("Paolo");
+//		
+////		idS.add(socioS.createSocio(input));
+//		
+//		input = new SocioDTO();
+//		input.setcFiscale("847528202");
+//		input.setCognome("Bianchi");
+//		input.setNome("alberto");
+//		
+////		idS.add(socioS.createSocio(input));
+//		
+//		input = new SocioDTO();
+//		input.setcFiscale("546378922");
+//		input.setCognome("Vianello");
+//		input.setNome("Gino");
+//		
+////		idS.add(socioS.createSocio(input));
+//		log.debug("After create");
+//		
+//	}
 	
 	private void certificatoProcess() {
 		try {

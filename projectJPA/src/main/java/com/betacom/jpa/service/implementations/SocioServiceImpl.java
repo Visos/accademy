@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.betacom.jpa.dto.AbbonamentoDTO;
 import com.betacom.jpa.dto.SocioDTO;
+import com.betacom.jpa.dto.SocioViewDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.pojo.Abbonamento;
 import com.betacom.jpa.pojo.Attivita;
@@ -35,7 +36,7 @@ public class SocioServiceImpl implements ISocioService{
 
 
 	@Override
-	public Integer createSocio(SocioDTO socioI) throws AcademyException {
+	public void createSocio(SocioDTO socioI) throws AcademyException {
 		Socio socio = null;
 		if(socioI.getId() != null) {
 			Optional<Socio> mysocio = socioR.findById(socioI.getId());
@@ -49,15 +50,21 @@ public class SocioServiceImpl implements ISocioService{
 		socio.setCognome(socioI.getCognome());
 		socio.setNome(socioI.getNome());
 		
-		return socioR.save(socio).getId();
 		
+		try {
+			socioR.save(socio);
+		} catch (Exception e) {
+			throw new AcademyException(e.getMessage());
+		}
+		
+				
 	}
 
-	@Override
-	public List<SocioDTO> listAllSocio() {
-		List<Socio> resp = socioR.findAll();
-		return transformInListDTO(resp);
-	}
+//	public List<SocioDTO> listAllSocio() {
+//		List<Socio> resp = socioR.findAll();
+//		return transformInListDTO(resp);
+//	}
+	
 	public List<SocioDTO> transformInListDTO(List<Socio> resp ) {
 		return resp.stream()
 		.map(s -> new SocioDTO(
@@ -69,6 +76,22 @@ public class SocioServiceImpl implements ISocioService{
 				(s.getCertificato() != null) ? s.getCertificato().getDataCertificato(): null,
 				(s.getCertificato() != null) ? (s.getCertificato().getTipo() ?"agonistico" : "Normale"): null,
 				(s.getAbbonamenti() != null) ? transformAbboInDTO(s.getAbbonamenti()): null
+				))
+		.collect(Collectors.toList());
+	}
+	
+	public List<SocioViewDTO> listAllSocio() {
+		List<Socio> resp = socioR.findAll();
+		return transformInListViewDTO(resp);
+	}
+	
+	public List<SocioViewDTO> transformInListViewDTO(List<Socio> resp ) {
+		return resp.stream()
+		.map(s -> new SocioViewDTO(
+				s.getId(),
+				s.getCognome(),
+				s.getNome(),
+				s.getcFiscale()
 				))
 		.collect(Collectors.toList());
 	}

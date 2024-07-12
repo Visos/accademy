@@ -21,12 +21,12 @@ public class JPAapplication {
 	
 	
 	
-	@Bean
-	CommandLineRunner commandLineRunner() {
-		return args -> {
-			//System.out.println("Init app");
-			proS.createNewSocio();
-		};
-	}
+//	@Bean
+//	CommandLineRunner commandLineRunner() {
+//		return args -> {
+//			//System.out.println("Init app");
+//			proS.createNewSocio();
+//		};
+//	}
 
 }
