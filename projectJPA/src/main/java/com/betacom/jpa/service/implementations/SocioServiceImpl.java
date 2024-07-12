@@ -35,8 +35,16 @@ public class SocioServiceImpl implements ISocioService{
 
 
 	@Override
-	public Integer createSocio(SocioDTO socioI) {
-		Socio socio = new Socio();
+	public Integer createSocio(SocioDTO socioI) throws AcademyException {
+		Socio socio = null;
+		if(socioI.getId() != null) {
+			Optional<Socio> mysocio = socioR.findById(socioI.getId());
+			if(mysocio.isEmpty())
+				throw new AcademyException("socio sconosciuto");
+			socio = mysocio.get();
+		}else
+			socio = new Socio();
+		
 		socio.setcFiscale(socioI.getcFiscale());
 		socio.setCognome(socioI.getCognome());
 		socio.setNome(socioI.getNome());

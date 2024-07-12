@@ -41,11 +41,17 @@ public class Bici{
 
 	
 
-	public Bici(Integer id,String tipoUso, List<TipoAmmortizzatore> sospensioni, Boolean pieghevole) {
+	public Bici(Integer id, String tipoUso, List<TipoAmmortizzatore> sospensioni, Boolean pieghevole, Veicolo veicolo) {
+		super();
 		this.id = id;
 		this.tipoUso = tipoUso;
 		this.sospensioni = sospensioni;
 		this.pieghevole = pieghevole;
+		this.veicolo = veicolo;
+	}
+
+	public Bici() {
+		super();
 	}
 
 	public Integer getId() {
@@ -79,6 +85,16 @@ public class Bici{
 	public void setPieghevole(Boolean pieghevole) {
 		this.pieghevole = pieghevole;
 	}
+
+	public Veicolo getVeicolo() {
+		return veicolo;
+	}
+
+	public void setVeicolo(Veicolo veicolo) {
+		this.veicolo = veicolo;
+	}
+
+
 	
 	
 	

@@ -9,48 +9,45 @@ import com.betacom.jpa.pojo.TipoVeicolo;
 public class VeicoloDTO {
 	
 	private Integer Id;
-	private TipoAlimentazione tipoAlimentazione;
-	private TipoColore colore;
-	private TipoVeicolo tipoVeicolo;
+	private String tipoAlimentazione;
+	private String colore;
+	private String tipoVeicolo;
 	private Integer numeroRuote;
 	private Integer nPosti;
-	private TipoMarca marca;
+	private String marca;
+	private Integer idBici;
+	private Integer idMacchina;
+	private Integer idMoto;
+
 	
 	
 	
-	public VeicoloDTO(Integer id, TipoAlimentazione tipoAlimentazione, TipoColore colore, TipoVeicolo tipoVeicolo,
-			Integer numeroRuote, Integer nPosti, TipoMarca marca) {
+
+	public VeicoloDTO() {
 		super();
-		Id = id;
-		this.tipoAlimentazione = tipoAlimentazione;
-		this.colore = colore;
-		this.tipoVeicolo = tipoVeicolo;
-		this.numeroRuote = numeroRuote;
-		this.nPosti = nPosti;
-		this.marca = marca;
-	}
+		}
 	public Integer getId() {
 		return Id;
 	}
 	public void setId(Integer id) {
 		Id = id;
 	}
-	public TipoAlimentazione getTipoAlimentazione() {
+	public String getTipoAlimentazione() {
 		return tipoAlimentazione;
 	}
-	public void setTipoAlimentazione(TipoAlimentazione tipoAlimentazione) {
+	public void setTipoAlimentazione(String tipoAlimentazione) {
 		this.tipoAlimentazione = tipoAlimentazione;
 	}
-	public TipoColore getColore() {
+	public String getColore() {
 		return colore;
 	}
-	public void setColore(TipoColore colore) {
+	public void setColore(String colore) {
 		this.colore = colore;
 	}
-	public TipoVeicolo getTipoVeicolo() {
+	public String getTipoVeicolo() {
 		return tipoVeicolo;
 	}
-	public void setTipoVeicolo(TipoVeicolo tipoVeicolo) {
+	public void setTipoVeicolo(String tipoVeicolo) {
 		this.tipoVeicolo = tipoVeicolo;
 	}
 	public Integer getNumeroRuote() {
@@ -65,10 +62,10 @@ public class VeicoloDTO {
 	public void setnPosti(Integer nPosti) {
 		this.nPosti = nPosti;
 	}
-	public TipoMarca getMarca() {
+	public String getMarca() {
 		return marca;
 	}
-	public void setMarca(TipoMarca marca) {
+	public void setMarca(String marca) {
 		this.marca = marca;
 	}
 	

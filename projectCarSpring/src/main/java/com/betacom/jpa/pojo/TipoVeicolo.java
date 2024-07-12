@@ -21,4 +21,31 @@ public class TipoVeicolo {
 	@OneToMany(mappedBy = "tipoVeicolo")
 	private List<Veicolo> veicoli;
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public List<Veicolo> getVeicoli() {
+		return veicoli;
+	}
+
+	public void setVeicoli(List<Veicolo> veicoli) {
+		this.veicoli = veicoli;
+	}
+	
+	
+	
+
 }

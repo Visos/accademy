@@ -85,6 +85,11 @@ public class Veicolo {
 	}
 
 
+	public Veicolo() {
+		super();
+	}
+
+
 	public Integer getId() {
 		return Id;
 	}
@@ -140,6 +145,38 @@ public class Veicolo {
 	public void setMarca(TipoMarca marca) {
 		this.marca = marca;
 	}
+
+
+	public Moto getMoto() {
+		return moto;
+	}
+
+
+	public void setMoto(Moto moto) {
+		this.moto = moto;
+	}
+
+
+	public Bici getBici() {
+		return bici;
+	}
+
+
+	public void setBici(Bici bici) {
+		this.bici = bici;
+	}
+
+
+	public Macchina getMacchina() {
+		return macchina;
+	}
+
+
+	public void setMacchina(Macchina macchina) {
+		this.macchina = macchina;
+	}
+	
+	
 	
 	
 	

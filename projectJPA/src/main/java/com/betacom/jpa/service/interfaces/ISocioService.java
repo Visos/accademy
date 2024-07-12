@@ -6,7 +6,7 @@ import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.exception.AcademyException;
 
 public interface ISocioService {
-	Integer createSocio(SocioDTO socio);
+	Integer createSocio(SocioDTO socio) throws AcademyException;
 	List<SocioDTO> listAllSocio();
 	List<SocioDTO> serachCognome(String cognome);
 	List<SocioDTO> serachCognomi(List<String> cognomi);

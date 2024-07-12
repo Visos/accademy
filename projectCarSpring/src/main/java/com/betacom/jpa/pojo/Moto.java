@@ -25,4 +25,38 @@ public class Moto {
 	@OneToOne(mappedBy = "moto")
 	private Veicolo veicolo;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTarga() {
+		return Targa;
+	}
+
+	public void setTarga(String targa) {
+		Targa = targa;
+	}
+
+	public Integer getCc() {
+		return cc;
+	}
+
+	public void setCc(Integer cc) {
+		this.cc = cc;
+	}
+
+	public Veicolo getVeicolo() {
+		return veicolo;
+	}
+
+	public void setVeicolo(Veicolo veicolo) {
+		this.veicolo = veicolo;
+	}
+
+	
+	
 }

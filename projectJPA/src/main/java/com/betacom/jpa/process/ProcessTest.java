@@ -42,9 +42,6 @@ public class ProcessTest {
 
 	
 	public void createNewSocio() {
-		
-
-
 //		socioProcess();
 //		certificatoProcess();
 //		createAbbonamento("09/05/2024", idS.get(0));
@@ -94,7 +91,7 @@ public class ProcessTest {
 
 	}
 	
-	private void socioProcess() {
+	private void socioProcess() throws AcademyException {
 		log.debug("Beigin create socio");
 
 		
@@ -136,6 +133,7 @@ public class ProcessTest {
 			certif.setTipo("normale");
 			certif.setSocioId(idS.get(0));
 			idC.add(certifS.create(certif));
+			
 			
 			certif = new CertificatoDTO();
 			certif.setDataCertificato("12/6/2023");
@@ -204,6 +202,7 @@ public class ProcessTest {
 			inp.setDataIscrizione(data);
 			inp.setSocioID(socioID);
 			idA.add(abboS.create(inp));
+			
 			abboS.create(inp);
 		} catch (AcademyException e) {
 			log.error("errore in creazione abbonamento: "+ socioID + " error " + e.getMessage());
