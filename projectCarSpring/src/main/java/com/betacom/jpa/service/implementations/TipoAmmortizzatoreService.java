@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.betacom.jpa.dto.TipoAmmortizzatoreDTO;
 import com.betacom.jpa.exception.AcademyException;
+import com.betacom.jpa.pojo.Bici;
 import com.betacom.jpa.pojo.TipoAmmortizzatore;
 import com.betacom.jpa.repository.ITipoAmmortizzatoreRepository;
 import com.betacom.jpa.service.intefaces.ITipoAmmortizzatoreService;
@@ -36,13 +37,16 @@ public class TipoAmmortizzatoreService implements ITipoAmmortizzatoreService{
 		.collect(Collectors.toList());
 	}
 	
-	public void removeAmmortizzatore(TipoAmmortizzatoreDTO ammo) throws AcademyException {
-		Optional<TipoAmmortizzatore> ammortizator = ammoR.findById(ammo.getId());
+	@Override
+	public void removeAmmortizzatore(Integer id) throws AcademyException {
+		Optional<TipoAmmortizzatore> ammortizator = ammoR.findById(id);
 		if(ammortizator.isEmpty())
 			throw new AcademyException("ammortizzatore sconosciuto");
 		
-		// DA FINIRE ELIMINARE BICI???
-		
+		if(ammortizator.get().getBiciclette().size() >0) {
+			throw new AcademyException("impossibile eliminare ammortizzatore, in uso su delle bici");
+		}
+			
 		ammoR.delete(ammortizator.get());
 			}
 }

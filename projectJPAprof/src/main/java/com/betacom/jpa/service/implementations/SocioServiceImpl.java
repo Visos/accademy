@@ -58,13 +58,27 @@ public class SocioServiceImpl implements ISocioService{
 		try {
 			socioR.save(socio);
 		} catch (Exception e) {
-			throw new AcademyException(msgS.getMessaggio("socio-generico") + e.getMessage());
+//			throw new AcademyException(msgS.getMessaggio("socio-generico") + e.getMessage());
+			throw new AcademyException(msgS.getMessaggio("socio-cfiscale"));
+
 		}
 	}
 
 	@Override
-	public List<SocioViewDTO> listAllSocio() {
-		List<Socio> resp = socioR.findAll();
+	public List<SocioViewDTO> listAllSocio(Integer id, String nome, String cognome) {
+		List<Socio> resp = new ArrayList<Socio>();
+		if(id != null) {
+			nome = null;
+			cognome = null;
+			}else {
+				if (nome == null) 
+					nome = "";
+				
+				if (cognome == null)
+					cognome = "";
+
+		}
+		resp = socioR.findSocioByNomeCognome(id, nome, cognome);
 		return tranformInListViewDTO(resp);
 	}
 
@@ -102,10 +116,23 @@ public class SocioServiceImpl implements ISocioService{
 		if (soc.isEmpty())
 			throw new AcademyException(msgS.getMessaggio("socio-non-trovato"));
 
+		/*
 		if (soc.get().getCertificato() != null) {
 			certifR.delete(soc.get().getCertificato());
 			log.debug("certificato cancellato");
 		}
+		
+		
+		if(soc.get().getAbbonamenti() != null) {
+			for(Abbonamento abb :soc.get().getAbbonamenti()) {				
+				abb.getAttivita().clear();
+			}
+			soc.get().getAbbonamenti().clear();
+		}
+		
+		socioR.save(soc.get());
+		*/
+		
 		socioR.delete(soc.get());
 		
 	}
@@ -167,7 +194,7 @@ public class SocioServiceImpl implements ISocioService{
 				.collect(Collectors.toList());
 	}
 	
-	private List<AbbonamentoViewDTO> loadListViewAbbDto (List<Abbonamento> resp){
+	public List<AbbonamentoViewDTO> loadListViewAbbDto (List<Abbonamento> resp){
 		return resp.stream()
 				.map(s-> new AbbonamentoViewDTO(
 						s.getId(),
@@ -177,12 +204,30 @@ public class SocioServiceImpl implements ISocioService{
 	}
 	
 	
-	private List<AttivitaDTO> transformAttivitaInDTO(List<Attivita> resp){
+	public List<AttivitaDTO> transformAttivitaInDTO(List<Attivita> resp){
 		return resp.stream()
 		.map(s-> new AttivitaDTO(
 				s.getId(),
 				s.getDescrizione()
 				)).collect(Collectors.toList());
+	}
+
+	@Override
+	public SocioViewDTO searchById(Integer id) {
+		Optional<Socio> s= socioR.findById(id);
+		
+		if(s.isEmpty()) {
+			
+		}
+		SocioViewDTO v = new SocioViewDTO(
+				s.get().getId(),
+				s.get().getCognome(),
+				s.get().getNome(),
+				s.get().getcFiscale(),
+				loadCertificato(s.get().getCertificato()),
+				loadListViewAbbDto(s.get().getAbbonamenti())
+				);
+		return v;
 	}
 
 

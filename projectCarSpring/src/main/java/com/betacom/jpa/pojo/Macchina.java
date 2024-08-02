@@ -17,7 +17,7 @@ public class Macchina {
 	private Integer id;
 	
 	@Column
-	private Integer numeroPorte;
+	public Integer numeroPorte;
 	
 	@Column(nullable = false, unique = true)
 	private String numerotarga;

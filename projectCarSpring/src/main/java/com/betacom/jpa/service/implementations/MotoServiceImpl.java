@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.betacom.jpa.dto.MotoDTO;
+import com.betacom.jpa.dto.MotoViewDto;
 import com.betacom.jpa.dto.VeicoloDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.pojo.Moto;
@@ -35,27 +36,7 @@ public class MotoServiceImpl implements IMotoService {
 	
 	public static Logger log = LoggerFactory.getLogger(MotoServiceImpl.class);
 
-	@Transactional(rollbackFor = Exception.class)
-	@Override
-	public void createMoto(MotoDTO motoI, VeicoloDTO veicolo) throws AcademyException {
-		Moto moto = null;
-		if(motoI.getId()!= null) {
-			Optional<Moto> mymoto = motoR.findById(motoI.getId());
-			if(mymoto.isEmpty()) 
-				throw new AcademyException("moto sconosciuta");
-			moto = mymoto.get();
-		}else
-			moto = new Moto();
-		if(motoI.getCc()<50 || motoI.getCc()>2000) {
-			throw new AcademyException("cc non valido");
-		}
-		moto.setCc(motoI.getCc());
-		if(motoI.getTarga().length()!=7) {
-			throw new AcademyException("numero targa non valido");
-		}
-		moto.setTarga(motoI.getTarga());
-		vecS.createVeicolo(veicolo, motoR.save(moto).getId());
-	}
+
 	
 	@Override
 	public void removeMoto(Integer id) throws AcademyException {
@@ -78,10 +59,10 @@ public class MotoServiceImpl implements IMotoService {
 	}
 
 	@Override
-	public List<MotoDTO> listAllMoto() {
+	public List<MotoViewDto> listAllMoto() {
 		List<Moto> resp = motoR.findAll();
 		
-		return transformInListDTO(resp);
+		return transformInListViewDTO(resp);
 	}
 
 	private List<MotoDTO> transformInListDTO(List<Moto> resp) {
@@ -90,7 +71,23 @@ public class MotoServiceImpl implements IMotoService {
 					s.getId(),
 					s.getTarga(),
 					s.getCc(),
-					s.getVeicolo()
+					s.getVeicolo().getId()
+						)).collect(Collectors.toList());
+	}
+	
+	private List<MotoViewDto> transformInListViewDTO(List<Moto> resp) {
+		return resp.stream()
+				.map(s-> new MotoViewDto(
+					s.getId(),
+					s.getTarga(),
+					s.getCc(),
+					s.getVeicolo().getId(),
+					s.getVeicolo().getTipoAlimentazione().getDescrizione(),
+					s.getVeicolo().getColore().getDescrizione(),
+					s.getVeicolo().getTipoVeicolo().getDescrizione(),
+					s.getVeicolo().getNumeroRuote(),
+					s.getVeicolo().getnPosti(),
+					s.getVeicolo().getMarca().getDescrizione()
 						)).collect(Collectors.toList());
 	}
 

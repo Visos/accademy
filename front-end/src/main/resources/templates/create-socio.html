@@ -1,0 +1,42 @@
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="../css/style.css">
+	<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+	<nav th:insert= "~{fragments/navigation :: block-navigation('Create/Update Socio')}"></nav>
+
+	<div class="container">
+		<h3 class="description">Inserire i dati relativi al socio</h3>
+		 <form class="form_content" th:action="@{/saveSocio}" th:object="${socio}" method="post">
+			<input type="hidden" th:field="*{id}" />
+			<table style="border: 0">
+				<tr>
+					<td><label for="nome">Nome:</label></td>
+					<td><input type="text" th:field="*{nome}" placeholder="Nome"
+						required><br></td>
+				</tr>
+				<td><label for="cognome">Cognome:</label></td>
+				<td><input type="text" th:field="*{cognome}"
+					placeholder="Cognome" required><br></td>
+				</tr>
+				<tr>
+					<td><label for="Codice fiscale">Codice fiscale:</label></td>
+					<td><input type="text" th:field="*{cFiscale}"
+						placeholder="Codice fiscale" required><br></td>
+				</tr>
+			</table>
+            <button type="submit">Registra socio</button>
+            </table>
+           <div class="container-error" th:if="*{errorMSG} != null">
+				<span th:text="*{errorMSG}" style="color:red">***</span>
+			</div>
+        
+        </form>
+
+		
+	
+	</div>
+</body>
+</html>

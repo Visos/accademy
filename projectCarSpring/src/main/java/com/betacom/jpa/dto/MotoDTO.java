@@ -10,14 +10,14 @@ public class MotoDTO {
 	
 	private Integer cc;
 	
-	private Veicolo veicolo;
+	private Integer veicolo;
 	
 	
 	public MotoDTO() {
 		super();
 	}
 	
-	public MotoDTO(Integer id, String targa, Integer cc, Veicolo veicolo) {
+	public MotoDTO(Integer id, String targa, Integer cc, Integer veicolo) {
 		super();
 		this.id = id;
 		Targa = targa;
@@ -49,11 +49,11 @@ public class MotoDTO {
 		this.cc = cc;
 	}
 
-	public Veicolo getVeicolo() {
+	public Integer getVeicolo() {
 		return veicolo;
 	}
 
-	public void setVeicolo(Veicolo veicolo) {
+	public void setVeicolo(Integer veicolo) {
 		this.veicolo = veicolo;
 	}
 

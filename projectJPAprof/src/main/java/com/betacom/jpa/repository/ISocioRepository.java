@@ -20,4 +20,7 @@ public interface ISocioRepository extends JpaRepository<Socio, Integer>{
 	
 	@Query(name="socio.selectByAttivita")
 	List<Socio> findSocioByAttivita(@Param("attivita") String attivita);
+	
+	@Query(name = "socio.selectByNomeCognome")
+	List<Socio> findSocioByNomeCognome(@Param("id") Integer id, @Param("nome") String nome, @Param("cognome") String cognome);
 }

@@ -41,17 +41,6 @@ public class Veicolo {
 	@ManyToOne
 	@JoinColumn(name = "marca")
 	private TipoMarca marca;
-//	
-//	@JoinColumn( name = "id_bici")
-//	private Integer idBici;
-//	
-//	@Column(name = "id_moto")
-//	private Integer idMoto;
-//
-//	@Column(name = "id_macchina")
-//	private Integer idMacchina;
-
-	
 	
 	@OneToOne
 	@JoinColumn(name = "id_moto",

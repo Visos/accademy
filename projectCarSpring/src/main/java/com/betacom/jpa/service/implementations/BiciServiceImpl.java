@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.betacom.jpa.dto.BiciDTO;
+import com.betacom.jpa.dto.BiciViewDto;
+import com.betacom.jpa.dto.TipoAmmortizzatoreDTO;
 import com.betacom.jpa.dto.VeicoloDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.pojo.Bici;
@@ -33,9 +35,7 @@ public class BiciServiceImpl implements IBiciService{
 	@Autowired
 	ITipoAmmortizzatoreRepository ammoR;
 	
-	@Autowired
-	IveicoloService vecS;
-	
+
 	@Autowired
 	IVeicoloRepository vecR;
 	
@@ -43,25 +43,7 @@ public class BiciServiceImpl implements IBiciService{
 
 	
 	@Transactional(rollbackFor = Exception.class)
-	@Override
-	public void create(BiciDTO biciI, VeicoloDTO veicolo) throws AcademyException {
-		Bici bici = null;
-		if(biciI.getId()!= null) {
-			Optional<Bici> mybici = biciR.findById(biciI.getId());
-			if(mybici.isEmpty())
-				throw new AcademyException("bici sconosciuta");
-			bici = mybici.get();
-		}else
-			bici = new Bici();
-		
-		bici.setPieghevole(biciI.getPieghevole());
-		
-		
-		bici.setTipoUso(biciI.getTipoUso());
-		
-		vecS.createVeicolo(veicolo, biciR.save(bici).getId());
-		
-	}
+
 
 	@Override
 	public void createAmmortizzatore(RequestBiciAmmortizzatori req) throws AcademyException {
@@ -90,7 +72,7 @@ public class BiciServiceImpl implements IBiciService{
 		if(veicolo.isEmpty())
 			throw new AcademyException("veicolo sconosciuto");
 		
-		Integer idBici = vecR.findById(id).get().getMoto().getId();
+		Integer idBici = vecR.findById(id).get().getBici().getId();
 		Optional<Bici> bici = biciR.findById(idBici);
 		if(bici.isEmpty())
 			throw new AcademyException("bici sconosciuta");
@@ -105,7 +87,13 @@ public class BiciServiceImpl implements IBiciService{
 	}
 
 	@Override
-	public List<BiciDTO> listAllBici() {
+	public List<BiciViewDto> listAllBici() {
+		List<Bici> resp = biciR.findAll();
+		return transformListInViewDTO(resp);
+	}
+	
+	@Override
+	public List<BiciDTO> list() {
 		List<Bici> resp = biciR.findAll();
 		return transformListInDTO(resp);
 	}
@@ -116,7 +104,36 @@ public class BiciServiceImpl implements IBiciService{
 						s.getId(),
 						s.getTipoUso(),
 						s.getPieghevole(),
-						s.getVeicolo()
+						s.getVeicolo().getId(),
+						transformAmmoInDto(s.getSospensioni())
+						)).collect(Collectors.toList());
+	}
+	
+	private List<BiciViewDto> transformListInViewDTO(List<Bici> resp) {
+		return resp.stream()
+				.map(s-> new BiciViewDto(
+						s.getId(),
+						s.getTipoUso(),
+						s.getPieghevole(),
+						transformAmmoInDto(s.getSospensioni()),
+						s.getVeicolo().getId(),
+						s.getVeicolo().getTipoAlimentazione().getDescrizione(),
+						s.getVeicolo().getColore().getDescrizione(),
+						s.getVeicolo().getTipoVeicolo().getDescrizione(),
+						s.getVeicolo().getNumeroRuote(),
+						s.getVeicolo().getnPosti(),
+						s.getVeicolo().getMarca().getDescrizione()
+						)).collect(Collectors.toList());
+	}
+	
+	@Override
+	public List<TipoAmmortizzatoreDTO> transformAmmoInDto(List<TipoAmmortizzatore> resp){
+		return resp.stream()
+				.map(s-> new TipoAmmortizzatoreDTO(
+						s.getId(),
+						s.getDescrizione(),
+						null
+						
 						)).collect(Collectors.toList());
 	}
 	

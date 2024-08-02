@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.betacom.jpa.dto.MacchinaDTO;
+import com.betacom.jpa.dto.MacchinaViewDto;
 import com.betacom.jpa.dto.VeicoloDTO;
 import com.betacom.jpa.pojo.Veicolo;
 
@@ -36,31 +37,7 @@ public class MacchinaServiceImpl implements IMacchinaService{
 	
 	public static Logger log = LoggerFactory.getLogger(MacchinaServiceImpl.class);
 
-	@Override
-	public void createMacchina(MacchinaDTO macchina, VeicoloDTO veicolo) throws AcademyException {
-		Macchina mac = null;
-		if(macchina.getId() != null) {
-			Optional<Macchina> myMac = maccR.findById(macchina.getId());
-			if(myMac.isEmpty())
-				throw new AcademyException("macchina sconosciuta");
-			mac = myMac.get();
-		}else
-			mac = new Macchina();
-		if(macchina.getNumeroPorte()>7 || macchina.getNumeroPorte()<2) {
-			throw new AcademyException("numero porte non valido");
-		}
-		mac.setNumeroPorte(macchina.getNumeroPorte());
-		if(macchina.getNumerotarga().length()!=7) {
-			throw new AcademyException("numero targa non valido");
-		}
-		mac.setNumerotarga(macchina.getNumerotarga());
-		
-				
-		vecS.createVeicolo(veicolo, maccR.save(mac).getId());
 
-		
-		
-	}
 	@Override
 	public void removeMacchina(Integer id) throws AcademyException {
 		Optional<Veicolo> veicolo = vecR.findById(id);
@@ -82,10 +59,11 @@ public class MacchinaServiceImpl implements IMacchinaService{
 	}
 	
 	@Override
-	public List<MacchinaDTO> listAllMacchine(){
+	public List<MacchinaViewDto> listAllMacchine(){
 		List<Macchina> rest = maccR.findAll();
-		return transformListInDTO(rest);
+		return transformListInViewDTO(rest);
 	}
+
 
 	public List<MacchinaDTO> transformListInDTO(List<Macchina> resp){
 		return resp.stream()
@@ -93,10 +71,26 @@ public class MacchinaServiceImpl implements IMacchinaService{
 						s.getId(),
 						s.getNumeroPorte(),
 						s.getNumerotarga(),
-						s.getVeicolo()
+						s.getVeicolo().getId()
 						)).collect(Collectors.toList());
-		
 	}
+	
+	public List<MacchinaViewDto> transformListInViewDTO(List<Macchina> resp){
+		return resp.stream()
+				.map( s-> new MacchinaViewDto(
+						s.getId(),
+						s.getNumeroPorte(),
+						s.getNumerotarga(),
+						s.getVeicolo().getId(),
+						s.getVeicolo().getTipoAlimentazione().getDescrizione(),
+						s.getVeicolo().getColore().getDescrizione(),
+						s.getVeicolo().getTipoVeicolo().getDescrizione(),
+						s.getVeicolo().getNumeroRuote(),
+						s.getVeicolo().getnPosti(),
+						s.getVeicolo().getMarca().getDescrizione()
+						)).collect(Collectors.toList());
+	}
+
 
 
 

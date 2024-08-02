@@ -37,13 +37,22 @@ public class CertificatoServiceImpl implements ICertificatoService{
 	public static Logger log = LoggerFactory.getLogger(CertificatoServiceImpl.class);
 	@Override
 	public void create(CertificatoReq certificato) throws AcademyException {
-		log.debug("Begin create :" + certificato.getDataCertificato());
+		log.debug("Begin create");
 		
 		Optional<Socio>  socio = socioR .findById(certificato.getSocioID());
 		if (socio.isEmpty())
 			throw new AcademyException(msgS.getMessaggio("Socio-non-trovato") + certificato.getDataCertificato());
 		
-		Certificato certif = new Certificato();
+		if(certificato.getId() != null && socio.get().getCertificato() == null) 
+			throw new AcademyException(msgS.getMessaggio("certif-ntfnd " + certificato.getDataCertificato()));
+		
+		Certificato certif = null;
+		if(socio.get().getCertificato() != null) {
+			certif = socio.get().getCertificato();
+		}else {
+			certif = new Certificato();
+		}
+		
 		if ((!"normale".equalsIgnoreCase(certificato.getTipo())) && (!"agonistico".equalsIgnoreCase(certificato.getTipo())) )
 			throw new AcademyException("tipo-invalido");
 		log.debug("Creazione");

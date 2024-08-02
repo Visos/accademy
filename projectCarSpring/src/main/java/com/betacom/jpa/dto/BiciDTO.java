@@ -14,20 +14,33 @@ public class BiciDTO {
 		
 	private Boolean pieghevole;
 	
-	private Veicolo veicolo;
+	private Integer veicolo;
 	
-	public BiciDTO(Integer id, String tipoUso, Boolean pieghevole, Veicolo veicolo) {
+	private List<TipoAmmortizzatoreDTO> ammortizzatore;
+	
+	
+	@Override
+	public String toString() {
+		return "BiciDTO [id=" + id + ", tipoUso=" + tipoUso + ", pieghevole=" + pieghevole + ", veicolo=" + veicolo
+				+ ", ammortizzatore=" + ammortizzatore + "]";
+	}
+
+	public BiciDTO(Integer id, String tipoUso, Boolean pieghevole, Integer veicolo,
+			List<TipoAmmortizzatoreDTO> ammortizzatore) {
 		super();
 		this.id = id;
 		this.tipoUso = tipoUso;
 		this.pieghevole = pieghevole;
 		this.veicolo = veicolo;
+		this.ammortizzatore = ammortizzatore;
 	}
 
-	@Override
-	public String toString() {
-		return "BiciDTO [id=" + id + ", tipoUso=" + tipoUso + ", pieghevole=" + pieghevole + ", veicolo=" + veicolo
-				+ "]";
+	public List<TipoAmmortizzatoreDTO> getAmmortizzatore() {
+		return ammortizzatore;
+	}
+
+	public void setAmmortizzatore(List<TipoAmmortizzatoreDTO> ammortizzatore) {
+		this.ammortizzatore = ammortizzatore;
 	}
 
 	public BiciDTO() {
@@ -59,11 +72,11 @@ public class BiciDTO {
 		this.pieghevole = pieghevole;
 	}
 
-	public Veicolo getVeicolo() {
+	public Integer getVeicolo() {
 		return veicolo;
 	}
 
-	public void setVeicolo(Veicolo veicolo) {
+	public void setVeicolo(Integer veicolo) {
 		this.veicolo = veicolo;
 	}
 	

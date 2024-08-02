@@ -8,7 +8,24 @@ public class TipoAmmortizzatoreDTO {
 	
 	private Integer id;
 	private String descrizione;
+	private Integer bici;
 	
+	
+	public TipoAmmortizzatoreDTO() {
+		super();
+	}
+
+	
+	
+	public TipoAmmortizzatoreDTO(Integer id, String descrizione, Integer bici) {
+		super();
+		this.id = id;
+		this.descrizione = descrizione;
+		this.bici = bici;
+	}
+
+
+
 	public Integer getId() {
 		return id;
 	}

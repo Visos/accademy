@@ -1,0 +1,52 @@
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="../css/style.css">
+	<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+	<nav th:insert= "~{fragments/navigation :: block-navigation('Elenco attivita per abbonamento')}"></nav>
+	<div align="center" th:if="${funzione == 'list'}">
+		<a th:href="@{/createAttivitaAbbo(abbID=${abbID}, socioID=${socioID})}" class="buttonlike">Create Attivita</a>
+	<input type="hidden" th:field="${socioID}" >
+
+	</div>
+	<br>
+
+	<div th:if="${attivita.rc}">
+		<div>
+			<table align="center">
+				<thead>
+					<tr>
+						<th>Descrizione</th>
+						<th th:if="${funzione == 'list'}">Azione</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="att : ${attivita.dati}">
+						<td th:text="${att.descrizione}"></td>
+						<td th:if="${funzione == 'list'}">
+							<a th:href="@{/removeAttivitaAbbonamenti(abbID=${abbID}, attID=${att.id}, socioID=${socioID})}">Remove</a>
+						</td>
+					
+					</tr>
+				
+				</tbody>			
+			</table>
+			<div th:if="${funzione == 'remove'}" align="center">
+				</br>
+				<a th:href="@{/forseRemoveAbbonamenti(abbID=${abbID})}">Remove Abbonamento</a>
+				<a th:href="@{/listAbbonamenti(socioID=${socioID})}">Cancel operation</a>
+			</div>
+			<div th:if="${funzione == 'list'}" align="center">
+				</br>
+				<a th:href="@{/listAbbonamenti(socioID=${socioID})}">Return </a>
+			</div>
+			
+		</div>
+	</div>
+	<div th:if="${attivita.rc == false}" align="center">
+		<span th:text="${attivita.msg}">***</span>
+	</div>
+</body>
+</html>

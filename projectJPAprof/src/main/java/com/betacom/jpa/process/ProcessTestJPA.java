@@ -13,6 +13,7 @@ import com.betacom.jpa.dto.AbbonamentoDTO;
 import com.betacom.jpa.dto.AttivitaDTO;
 import com.betacom.jpa.dto.CertificatoDTO;
 import com.betacom.jpa.dto.SocioDTO;
+import com.betacom.jpa.dto.SocioViewDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.request.AbbonamentoAttivitaReq;
 import com.betacom.jpa.service.interfaces.IAbbonamentoService;
@@ -66,11 +67,11 @@ public class ProcessTestJPA {
 //		createAttivita("Judo");
 
 //		
-//		listSocio();
-		log.debug("extract cognome with o");
-		listSocioLike("o");
+//		log.debug("extract cognome with o");
+//		listSocioLike("o");
 //		listCetificati();
-		listSocioAttivita("Yoga");
+//		listSocioAttivita("Yoga");
+		listSocio();
 		
 		
 //		log.debug("******** Find by cognome ********************");
@@ -132,9 +133,9 @@ public class ProcessTestJPA {
 //
 //	}
 	
-	private void listSocioLike(String pattern) {
+	private void listSocio() {
 		log.info("List Socio Like ******");
-		List<SocioDTO> lS = socioS.searchCognomiLike(pattern);
+		List<SocioViewDTO> lS = socioS.listAllSocio(null, null, null);
 		lS.forEach(s -> log.info(s.toString()));
 
 	}

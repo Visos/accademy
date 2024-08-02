@@ -1,9 +1,5 @@
 package com.betacom.jpa.dto;
 
-import com.betacom.jpa.pojo.TipoAlimentazione;
-import com.betacom.jpa.pojo.TipoColore;
-import com.betacom.jpa.pojo.TipoMarca;
-import com.betacom.jpa.pojo.TipoVeicolo;
 
 
 public class VeicoloDTO {
@@ -15,17 +11,27 @@ public class VeicoloDTO {
 	private Integer numeroRuote;
 	private Integer nPosti;
 	private String marca;
-	private Integer idBici;
-	private Integer idMacchina;
-	private Integer idMoto;
+	
+	private BiciDTO bici;
+	private MacchinaDTO macchina;
+	private MotoDTO moto;
 
 	
-	
-	
-
-	public VeicoloDTO() {
-		super();
+	public VeicoloDTO(Integer id, String tipoAlimentazione, String colore, String tipoVeicolo, Integer numeroRuote,Integer nPosti, String marca, BiciDTO bici, MacchinaDTO macchina, MotoDTO moto) {
+		this.Id = id;
+		this.tipoAlimentazione = tipoAlimentazione;
+		this.colore = colore;
+		this.tipoVeicolo = tipoVeicolo;
+		this.numeroRuote = numeroRuote;
+		this.nPosti = nPosti;
+		this.marca = marca;
+		this.bici = bici;
+		this.macchina = macchina;
+		this.moto = moto;
 		}
+	public VeicoloDTO() {
+	super();
+	}
 	public Integer getId() {
 		return Id;
 	}
@@ -68,6 +74,32 @@ public class VeicoloDTO {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
+	@Override
+	public String toString() {
+		return "VeicoloDTO [Id=" + Id + ", tipoAlimentazione=" + tipoAlimentazione + ", colore=" + colore
+				+ ", tipoVeicolo=" + tipoVeicolo + ", numeroRuote=" + numeroRuote + ", nPosti=" + nPosti + ", marca="
+				+ marca + ", bici=" + bici + ", macchina=" + macchina + ", moto=" + moto + "]";
+	}
+	public BiciDTO getBici() {
+		return bici;
+	}
+	public void setBici(BiciDTO bici) {
+		this.bici = bici;
+	}
+	public MacchinaDTO getMacchina() {
+		return macchina;
+	}
+	public void setMacchina(MacchinaDTO macchina) {
+		this.macchina = macchina;
+	}
+	public MotoDTO getMoto() {
+		return moto;
+	}
+	public void setMoto(MotoDTO moto) {
+		this.moto = moto;
+	}
+	
+	
 	
 	
 	

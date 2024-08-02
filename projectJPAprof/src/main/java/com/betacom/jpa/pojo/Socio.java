@@ -2,6 +2,7 @@ package com.betacom.jpa.pojo;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -32,12 +33,13 @@ public class Socio {
 			)
 	private String cFiscale;
 
-	@OneToOne (mappedBy = "socio")
+	@OneToOne (mappedBy = "socio", cascade = CascadeType.ALL)
 	private Certificato certificato;
 	
 	@OneToMany(
 			mappedBy = "socio",
-			fetch = FetchType.EAGER
+			fetch = FetchType.EAGER,
+			cascade = CascadeType.ALL
 			)
 	private List<Abbonamento> abbonamenti; 
 	

@@ -1,0 +1,18 @@
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="../css/style.css">
+	<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+	<div th:fragment="block-navigation(myTitle)">
+		<h1 align="center">Project JPA</h1>
+		<div class="navbar">
+			<a th:href="@{/listSocio}">Socio</a>
+			<a th:href="@{/attivita}">Attivita</a>
+		</div>
+	
+		<h2 align="center" th:text="${myTitle}"></h2>
+	</div>
+</body>
+</html>

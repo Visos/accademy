@@ -9,9 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.betacom.jpa.dto.BiciDTO;
+import com.betacom.jpa.dto.BiciViewDto;
 import com.betacom.jpa.dto.MacchinaDTO;
+import com.betacom.jpa.dto.MacchinaViewDto;
 import com.betacom.jpa.dto.MarcaDTO;
 import com.betacom.jpa.dto.MotoDTO;
+import com.betacom.jpa.dto.MotoViewDto;
 import com.betacom.jpa.dto.TipoAlimentazioneDTO;
 import com.betacom.jpa.dto.TipoAmmortizzatoreDTO;
 import com.betacom.jpa.dto.TipoColoreDTO;
@@ -78,16 +81,18 @@ public class ProcessTest {
 //		createAlim();
 //		createColore();
 //		createTipoVeicolo();
-		createMacchina();
+//		createMacchina();
 //		createMoto();
 //		createBici();
-//		createBiciAmmortizzatore(1, new String[] { "assurdo", "aggiunto"});
+//		createBiciAmmortizzatore(12, new String[] { "assurdo", "ccezionale"});
 //		removeMacchina();
 //		removeMoto();
 		
-		listMoto();
-		listMacchine();
-		listBici();
+//		listMoto();
+//		listMacchine();
+//		listBici();
+//		listVeicoli();
+
 		
 
 		
@@ -234,19 +239,19 @@ public class ProcessTest {
 		log.info("creazione macchina");
 		MacchinaDTO inputM = new MacchinaDTO();
 		inputM.setNumeroPorte(4);
-		inputM.setNumerotarga("3339067");
+		inputM.setNumerotarga("1232267");
 		
 		VeicoloDTO inputV = new VeicoloDTO();
-		inputV.setnPosti(3);
+		inputV.setnPosti(5);
 		inputV.setNumeroRuote(4);
-		inputV.setColore("giallo");
-		inputV.setMarca("Lamborghini");
+		inputV.setColore("rosso");
+		inputV.setMarca("Ferrari");
 		inputV.setTipoAlimentazione("Disel");
 		inputV.setTipoVeicolo("A-1");
 		
 		
 		try {
-			maccS.createMacchina(inputM, inputV);			
+			vecS.createMacchina(inputM, inputV);			
 		} catch (AcademyException e) {
 			System.out.println("erroe in creazione macchina: " + e.getMessage());
 			e.printStackTrace();
@@ -257,7 +262,7 @@ public class ProcessTest {
 		log.info("creazione moto");
 		MotoDTO input = new MotoDTO();
 		input.setCc(500);
-		input.setTarga("1224577");
+		input.setTarga("fvbhfvh");
 		
 		VeicoloDTO inputV = new VeicoloDTO();
 		inputV.setnPosti(2);
@@ -268,7 +273,7 @@ public class ProcessTest {
 		inputV.setTipoVeicolo("M-1");
 		
 		try {
-			motoS.createMoto(input, inputV);
+			vecS.createMoto(input, inputV);
 		} catch (AcademyException e) {
 			System.out.println("erroe in creazione macchina: " + e.getMessage());
 			e.printStackTrace();
@@ -292,7 +297,7 @@ public class ProcessTest {
 		
 		
 		try {
-			biciS.create(input, inputV);
+			vecS.createBici(input, inputV);
 		} catch (AcademyException e) {
 			System.out.println("erroe in creazione bici: " + e.getMessage());
 			e.printStackTrace();
@@ -306,7 +311,7 @@ public class ProcessTest {
 		try {
 			biciS.createAmmortizzatore(req);
 		} catch (AcademyException e) {
-			// TODO Auto-generated catch block
+			System.out.println("errore in creazione bici/ammortizzatore:" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -340,7 +345,7 @@ public class ProcessTest {
 	
 	private void listMacchine() {
 
-		List<MacchinaDTO> l = maccS.listAllMacchine();
+		List<MacchinaViewDto> l = maccS.listAllMacchine();
 		log.info("-----------------LISTA MACCHINE-----------");
 
 		l.forEach(m-> System.out.println(m.toString()));
@@ -349,7 +354,7 @@ public class ProcessTest {
 	
 	private void listMoto() {
 
-		List<MotoDTO> l = motoS.listAllMoto();
+		List<MotoViewDto> l = motoS.listAllMoto();
 		log.info("-----------------LISTA MOTO-----------");
 
 		l.forEach(m-> System.out.println(m.toString()));
@@ -358,11 +363,18 @@ public class ProcessTest {
 	
 	private void listBici() {
 
-		List<BiciDTO> l = biciS.listAllBici();
+		List<BiciViewDto> l = biciS.listAllBici();
 		log.info("-----------------LISTA BICI-----------");
 
 		l.forEach(m-> System.out.println(m.toString()));
 
+	}
+	
+	private void listVeicoli() {
+		List<VeicoloDTO> l = vecS.listAll();
+		log.info("-----------------LISTA Veicoli-----------");
+
+		l.forEach(m-> System.out.println(m.toString()));
 	}
 
 

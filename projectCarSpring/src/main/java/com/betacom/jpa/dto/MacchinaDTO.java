@@ -9,12 +9,14 @@ public class MacchinaDTO {
 	private Integer id;
 	private Integer numeroPorte;
 	private String numerotarga;
-	private Veicolo veicolo;
+	
+	private Integer veicolo;
 	
 	
 	
 	
-	public MacchinaDTO(Integer id, Integer numeroPorte, String numerotarga, Veicolo veicolo) {
+	
+	public MacchinaDTO(Integer id, Integer numeroPorte, String numerotarga, Integer veicolo) {
 		super();
 		this.id = id;
 		this.numeroPorte = numeroPorte;
@@ -42,17 +44,18 @@ public class MacchinaDTO {
 	public void setNumerotarga(String numerotarga) {
 		this.numerotarga = numerotarga;
 	}
-	public Veicolo getVeicolo() {
+	public Integer getVeicolo() {
 		return veicolo;
 	}
-	public void setVeicolo(Veicolo veicolo) {
+	public void setVeicolo(Integer veicolo) {
 		this.veicolo = veicolo;
 	}
 	@Override
 	public String toString() {
 		return "MacchinaDTO [id=" + id + ", numeroPorte=" + numeroPorte + ", numerotarga=" + numerotarga + ", veicolo="
-				+ veicolo.getId() + "]";
+				+ veicolo + "]";
 	}
+
 
 	
 	
