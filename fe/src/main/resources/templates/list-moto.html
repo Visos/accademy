@@ -38,7 +38,7 @@
                     <td th:if="${moto != null}" th:text="${moto.marca}"></td>
                     <td th:if="${moto != null}" th:text="${moto.tipo}"></td>
                     <td th:if="${moto != null}">
-                        <a th:href="@{/updateMoto(motoID=${moto.motoID})}">Update</a>
+                        <a th:href="@{/updateMoto(veicoloID=${moto.idVeicolo})}">Update</a>
                         <a th:href="@{/removeVeicolo(veicoloID=${moto.idVeicolo})}">Remove</a>
                     </td>
                 </tr>

@@ -1,66 +1,151 @@
 <!DOCTYPE html>
 <html lang="it" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Project Car JPA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/style.css">
+<title>Project Car JPA</title>
 </head>
 <body>
-    <nav th:insert= "~{fragments/navigation :: block-navigation('Create auto')}"></nav>
-    <div class="container">
-        <h3 class="description">Inserire i dati</h3>
-        <form th:action="@{/saveAuto}" th:object="${auto}" method="post">
-            <table>
-                <tr>
-                    <td><label for="Numero ruote">Numero ruote:</label></td>
-                    <td><input type="text" th:field="*{numeroRuote}" placeholder="Numero ruote" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Numero posti">Numero posti:</label></td>
-                    <td><input type="number" th:field="*{numeroPosti}" placeholder="Numero posti" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Alimentazione">Alimentazione:</label></td>
-                    <td><input type="text" th:field="*{alimentazione}" placeholder="Alimentazione" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Colore">Colore:</label></td>
-                    <td><input type="text" th:field="*{colore}" placeholder="Colore" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Marca">Marca:</label></td>
-                    <td><input type="text" th:field="*{marca}" placeholder="Marca" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Tipologia">Tipologia:</label></td>
-                    <td><input type="text" th:field="*{tipoVeicolo}" placeholder="Tipologia" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Numero porte">Numero porte:</label></td>
-                    <td><input type="number" th:field="*{numeroPorte}" placeholder="Numero porte" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Targa">Targa:</label></td>
-                    <td><input type="text" th:field="*{targa}" placeholder="Targa" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Cilindrata">Cilindrata:</label></td>
-                    <td><input type="number" th:field="*{cilindrata}" placeholder="Cilindrata" required></td>
-                </tr>
-                <tr>
-                    <td><label for="Kilowatt">Kilowatt:</label></td>
-                    <td><input type="number" th:field="*{kilowatt}" placeholder="Kilowatt" required></td>
-                </tr>
-            </table>
-            
-            <table>
-                <button type="submit">Registra auto</button>
-            </table>
-            <div class="container-error" th:if="*{errorMsg} != null">
-                <span th:text="*{errorMsg}" style="color: red">***</span>
-            </div>
-        </form>
-    </div>
+	<nav
+		th:insert="~{fragments/navigation :: block-navigation('Auto')}"></nav>
+	<div align="center" th:if="${funzione=='create'}">
+		<h2 align="center">Creare nuova auto</h2>
+		<div class="container">
+			<h3 class="description">Inserire i dati relativi alla nuova auto</h3>
+			<form th:action="@{/saveAuto}" th:object="${auto}" method="post">
+				<table>
+					<tr>
+						<td><label for="Numero ruote">Numero ruote:</label></td>
+						<td><input type="text" th:field="*{numeroRuote}"
+							placeholder="Numero ruote" required></td>
+					</tr>
+					<tr>
+						<td><label for="Numero posti">Numero posti:</label></td>
+						<td><input type="number" th:field="*{numeroPosti}"
+							placeholder="Numero posti" required></td>
+					</tr>
+					<tr>
+						<td><label for="Alimentazione">Alimentazione:</label></td>
+						<td><input type="text" th:field="*{alimentazione}"
+							placeholder="Alimentazione" required></td>
+					</tr>
+					<tr>
+						<td><label for="Colore">Colore:</label></td>
+						<td><input type="text" th:field="*{colore}"
+							placeholder="Colore" required></td>
+					</tr>
+					<tr>
+						<td><label for="Marca">Marca:</label></td>
+						<td><input type="text" th:field="*{marca}"
+							placeholder="Marca" required></td>
+					</tr>
+					<tr>
+						<td><label for="Tipologia">Tipologia:</label></td>
+						<td><input type="text" th:field="*{tipoVeicolo}"
+							placeholder="Tipologia" required></td>
+					</tr>
+					<tr>
+						<td><label for="Numero porte">Numero porte:</label></td>
+						<td><input type="number" th:field="*{numeroPorte}"
+							placeholder="Numero porte" required></td>
+					</tr>
+					<tr>
+						<td><label for="Targa">Targa:</label></td>
+						<td><input type="text" th:field="*{targa}"
+							placeholder="Targa" required></td>
+					</tr>
+					<tr>
+						<td><label for="Cilindrata">Cilindrata:</label></td>
+						<td><input type="number" th:field="*{cilindrata}"
+							placeholder="Cilindrata" required></td>
+					</tr>
+					<tr>
+						<td><label for="Kilowatt">Kilowatt:</label></td>
+						<td><input type="number" th:field="*{kilowatt}"
+							placeholder="Kilowatt" required></td>
+					</tr>
+				</table>
+
+				<div>
+					<button type="submit">Registra auto</button>
+				</div>
+
+				<div class="container-error" th:if="*{errorMsg} != null">
+					<span th:text="*{errorMsg}" style="color: red">***</span>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div align="center" th:if="${funzione=='update'}">
+		<h2 align="center">Modifica auto</h2>
+		<div class="container">
+			<h3 class="description">Inserire i dati</h3>
+			<form th:action="@{/saveAuto}" th:object="${auto}" method="post">
+				<input type="hidden" th:field="*{idVeicolo}" />
+				<table>
+					<tr>
+						<td><label for="Numero ruote">Numero ruote:</label></td>
+						<td><input type="text" th:field="*{numeroRuote}"
+							placeholder="Numero ruote" required></td>
+					</tr>
+					<tr>
+						<td><label for="Numero posti">Numero posti:</label></td>
+						<td><input type="number" th:field="*{numeroPosti}"
+							placeholder="Numero posti" required></td>
+					</tr>
+					<tr>
+						<td><label for="Alimentazione">Alimentazione:</label></td>
+						<td><input type="text" th:field="*{alimentazione}"
+							placeholder="Alimentazione" required></td>
+					</tr>
+					<tr>
+						<td><label for="Colore">Colore:</label></td>
+						<td><input type="text" th:field="*{colore}"
+							placeholder="Colore" required></td>
+					</tr>
+					<tr>
+						<td><label for="Marca">Marca:</label></td>
+						<td><input type="text" th:field="*{marca}"
+							placeholder="Marca" required></td>
+					</tr>
+					<tr>
+						<td><label for="Tipologia">Tipologia:</label></td>
+						<td><input type="text" th:field="*{tipoVeicolo}"
+							placeholder="Tipologia" required></td>
+					</tr>
+					<tr>
+						<td><label for="Numero porte">Numero porte:</label></td>
+						<td><input type="number" th:field="*{numeroPorte}"
+							placeholder="Numero porte" required></td>
+					</tr>
+					<tr>
+						<td><label for="Targa">Targa:</label></td>
+						<td><input type="text" th:field="*{targa}"
+							placeholder="Targa" required></td>
+					</tr>
+					<tr>
+						<td><label for="Cilindrata">Cilindrata:</label></td>
+						<td><input type="number" th:field="*{cilindrata}"
+							placeholder="Cilindrata" required></td>
+					</tr>
+					<tr>
+						<td><label for="Kilowatt">Kilowatt:</label></td>
+						<td><input type="number" th:field="*{kilowatt}"
+							placeholder="Kilowatt" required></td>
+					</tr>
+				</table>
+
+				<div>
+					<button type="submit">Salva modifiche</button>
+				</div>
+
+				<div class="container-error" th:if="*{errorMsg} != null">
+					<span th:text="*{errorMsg}" style="color: red">***</span>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

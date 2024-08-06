@@ -9,13 +9,15 @@
 <body>
 
 	<nav
-		th:insert="~{fragments/navigation :: block-navigation('Create moto')}"></nav>
+		th:insert="~{fragments/navigation :: block-navigation('Modifica moto')}"></nav>
 
 	<div class="container">
-		<h3 class="description">Inserire i dati relativi alla moto</h3>
+		<h3 class="description">Inserire i dati relativi alla moto da
+			modificare</h3>
 		<form class="form_content" th:action="@{/saveMoto}"
 			th:object="${moto}" method="post">
-			<input type="hidden" th:field="*{id}" />
+			<input type="hidden" th:field="*{id}" /> <input type="hidden"
+				th:field="*{idVeicolo}" />
 			<table style="border: 0">
 				<tr>
 					<td><label for="cilindrata">Cilindrata:</label></td>
@@ -64,9 +66,8 @@
 						placeholder="Tipologia" required><br></td>
 				</tr>
 			</table>
-			<br>
-			<button type="submit">Registra moto</button>
-			
+			<button type="submit">Salva moto</button>
+
 			<div class="container-error" th:if="*{errorMsg} != null">
 				<span th:text="*{errorMsg}" style="color: red">***</span>
 			</div>

@@ -39,7 +39,7 @@
 					<td th:if="${bici != null}" th:text="${bici.pieghevole}"></td>
 					<td th:if="${bici != null}" th:text="${bici.ammortizzatore}"></td>
 					<td th:if="${bici != null}"><a
-						th:href="@{/createBici(idVeicolo=${bici.idVeicolo})}">Update</a>
+						th:href="@{/updateBici(veicoloID=${bici.idVeicolo})}">Update</a>
 						<a th:href="@{/removeVeicolo(veicoloID=${bici.idVeicolo})}">Remove</a>
 					</td>
 				</tr>

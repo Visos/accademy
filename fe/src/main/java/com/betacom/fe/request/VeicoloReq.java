@@ -9,20 +9,7 @@ public class VeicoloReq {
 	private String colore;
 	private String marca;
 	private String tipoVeicolo;
-	private String errorMSG;
-	
-	public String getErrorMSG() {
-		return errorMSG;
-	}
 
-	public void setErrorMSG(String errorMSG) {
-		this.errorMSG = errorMSG;
-	}
-
-//	private AutoReq autoR;
-//	private BiciReq biciR;
-//	private MotoReq motoR;
-	
 	public VeicoloReq() {
 		super();
 	}
@@ -93,14 +80,6 @@ public class VeicoloReq {
 	public void setTipoVeicolo(String tipoVeicolo) {
 		this.tipoVeicolo = tipoVeicolo;
 	}
-
-	@Override
-	public String toString() {
-		return "VeicoloReq [idVeicolo=" + idVeicolo + ", numeroRuote=" + numeroRuote + ", numeroPosti=" + numeroPosti
-				+ ", alimentazione=" + alimentazione + ", colore=" + colore + ", marca=" + marca + ", tipoVeicolo="
-				+ tipoVeicolo + ", errorMSG=" + errorMSG + "]";
-	}
-	
 
 
 }

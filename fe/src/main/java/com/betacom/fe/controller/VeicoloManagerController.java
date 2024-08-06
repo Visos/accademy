@@ -45,8 +45,7 @@ public class VeicoloManagerController {
         ModelAndView mav = new ModelAndView("list-veicolo");
 
         URI uri = UriComponentsBuilder
-                .fromHttpUrl(backend + "veicolo/listAll")
-                .queryParam("cat")
+                .fromHttpUrl(backend + "veicolo/listVeicoli")
                 .buildAndExpand().toUri();
         log.debug("Uri: " + uri);
 
@@ -71,32 +70,31 @@ public class VeicoloManagerController {
 
         return "redirect:/listVeicolo";
     }
-    
-
-    
-	@PostMapping("/saveVeicolo")
-	public Object saveSocio(@ModelAttribute("veicolo") VeicoloReq req) {
-		log.debug("id: " + req.getIdVeicolo());
-		
-		URI uri = UriComponentsBuilder
-				.fromHttpUrl(backend + "veicolo/update")
-				.buildAndExpand().toUri();
-		
-		//la differenza che ho con la funzione precedente è che siamo in POST
-		ResponseBase resp = rest.postForEntity(uri, req, ResponseBase.class).getBody();
-		log.debug("rc: " + resp.getRc());
-		
-		if (!resp.getRc()) {
-			ModelAndView mav = new ModelAndView("update-veicolo");
-			req.setErrorMSG("Errore: " + resp.getMsg());
-			mav.addObject("attivita", req);
-			return mav;
-		}
-		
-		//in questo modo voglio dico che voglio aggiornare la pagina e tornare in listSocio
-		return "redirect:/listVeicolo";
-		
-		
-	}
+//    
+//
+//	@PostMapping("/saveVeicolo")
+//	public Object saveSocio(@ModelAttribute("veicolo") VeicoloReq req) {
+//		log.debug("id: " + req.getIdVeicolo());
+//		
+//		URI uri = UriComponentsBuilder
+//				.fromHttpUrl(backend + "veicolo/create")
+//				.buildAndExpand().toUri();
+//		
+//		//la differenza che ho con la funzione precedente è che siamo in POST
+//		ResponseBase resp = rest.postForEntity(uri, req, ResponseBase.class).getBody();
+//		log.debug("rc: " + resp.getRc());
+//		
+//		if (!resp.getRc()) {
+//			ModelAndView mav = new ModelAndView("update-veicolo");
+//			req.setErrorMSG("Errore: " + resp.getMsg());
+//			mav.addObject("attivita", req);
+//			return mav;
+//		}
+//		
+//		//in questo modo voglio dico che voglio aggiornare la pagina e tornare in listSocio
+//		return "redirect:/listVeicolo";
+//		
+//		
+//	}
     
 }

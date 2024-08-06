@@ -59,14 +59,6 @@ public class BiciReq extends VeicoloReq{
 	public void setAmmortizzatore(Boolean ammortizzatore) {
 		this.ammortizzatore = ammortizzatore;
 	}
-
-	@Override
-	public String toString() {
-		return "BiciReq [ idVeicoloid= "+ getIdVeicolo() + "id= "+ id + ", pedalataAssistita=" + pedalataAssistita + ", pieghevole=" + pieghevole
-				+ ", ammortizzatore=" + ammortizzatore + ", errorMsg=" + errorMsg + "]";
-	}
-	
-	
 	
 		
 }

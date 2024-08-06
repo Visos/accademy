@@ -1,13 +1,802 @@
-2024-08-06T09:51:54.530+02:00  INFO 12932 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.10 with PID 12932 (C:\Users\Betacom\Documents\GitHub\accademy\fe\target\classes started by Betacom in C:\Users\Betacom\Documents\GitHub\accademy\fe)
-2024-08-06T09:51:54.545+02:00 DEBUG 12932 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
-2024-08-06T09:51:54.553+02:00  INFO 12932 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
-2024-08-06T09:51:54.647+02:00  INFO 12932 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-06T09:51:54.653+02:00  INFO 12932 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-06T09:51:56.525+02:00  INFO 12932 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
-2024-08-06T09:51:56.576+02:00  INFO 12932 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-06T09:51:56.577+02:00  INFO 12932 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-06T09:51:56.711+02:00  INFO 12932 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-06T09:51:56.712+02:00  INFO 12932 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2057 ms
-2024-08-06T09:51:57.622+02:00  INFO 12932 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-08-06T09:51:57.683+02:00  INFO 12932 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
-2024-08-06T09:51:57.711+02:00  INFO 12932 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 3.827 seconds (process running for 4.577)
+2024-08-06T09:32:14.996+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 508 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T09:32:15.007+02:00 DEBUG 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T09:32:15.009+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T09:32:15.081+02:00  INFO 508 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06T09:32:15.087+02:00  INFO 508 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06T09:32:16.356+02:00  INFO 508 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T09:32:16.377+02:00  INFO 508 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T09:32:16.378+02:00  INFO 508 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T09:32:16.441+02:00  INFO 508 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T09:32:16.442+02:00  INFO 508 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1354 ms
+2024-08-06T09:32:16.975+02:00  WARN 508 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-06T09:32:17.015+02:00  INFO 508 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T09:32:17.029+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 2.48 seconds (process running for 2.925)
+2024-08-06T09:32:44.659+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T09:32:44.660+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T09:32:44.662+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-06T09:32:44.716+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T09:32:54.030+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-4] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/veicolo/listAll?cat=auto
+2024-08-06T09:33:45.390+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-10] c.b.fe.controller.AutoManagerController  : id: null
+2024-08-06T09:33:45.632+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-10] c.b.fe.controller.AutoManagerController  : rc: true
+2024-08-06T09:33:45.642+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/veicolo/listAll?cat=auto
+2024-08-06T09:33:54.251+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.AutoManagerController  : veicoloDTO: 4
+2024-08-06T09:33:54.251+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.AutoManagerController  : veicoloReq: 4
+2024-08-06T09:33:54.252+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.AutoManagerController  : veicoloDTO: sportiva
+2024-08-06T09:33:54.252+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.AutoManagerController  : veicoloReq: sportiva
+2024-08-06T09:34:06.830+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-5] c.b.fe.controller.AutoManagerController  : id: 15
+2024-08-06T09:34:06.831+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-5] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/auto/updateAuto
+2024-08-06T09:34:06.974+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-6] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/veicolo/listAll?cat=auto
+2024-08-06T09:34:52.095+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-9] c.b.f.c.VeicoloManagerController         : URI
+2024-08-06T09:34:52.197+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-9] c.b.f.c.VeicoloManagerController         : rc: true
+2024-08-06T09:34:52.204+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-10] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T09:35:01.147+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-2] c.b.fe.controller.MotoManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=moto
+2024-08-06T09:35:01.200+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-2] c.b.fe.controller.MotoManagerController  : List moto: com.betacom.fe.response.Response@365f529d
+2024-08-06T09:35:06.793+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-4] c.b.fe.controller.MotoManagerController  : URI
+2024-08-06T09:35:13.082+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-7] c.b.fe.controller.MotoManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=moto
+2024-08-06T09:35:13.130+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-7] c.b.fe.controller.MotoManagerController  : List moto: com.betacom.fe.response.Response@28a67fa5
+2024-08-06T09:35:17.957+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-9] c.b.fe.controller.MotoManagerController  : URI
+2024-08-06T09:35:22.507+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-2] c.b.fe.controller.MotoManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=moto
+2024-08-06T09:35:22.557+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-2] c.b.fe.controller.MotoManagerController  : List moto: com.betacom.fe.response.Response@24cd1b0b
+2024-08-06T09:45:51.640+02:00  INFO 508 --- [fe] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06T09:45:51.854+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 508 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T09:45:51.855+02:00 DEBUG 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T09:45:51.856+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T09:45:52.077+02:00  INFO 508 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T09:45:52.079+02:00  INFO 508 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T09:45:52.079+02:00  INFO 508 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T09:45:52.095+02:00  INFO 508 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T09:45:52.095+02:00  INFO 508 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 236 ms
+2024-08-06T09:45:52.208+02:00  WARN 508 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-06T09:45:52.220+02:00  INFO 508 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T09:45:52.225+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 0.4 seconds (process running for 818.121)
+2024-08-06T09:45:52.228+02:00  INFO 508 --- [fe] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-06T09:46:01.527+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T09:46:01.527+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T09:46:01.528+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-06T09:46:01.533+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.MotoManagerController  : URI
+2024-08-06T09:46:16.558+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-5] c.b.fe.controller.MotoManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=moto
+2024-08-06T09:46:16.607+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-5] c.b.fe.controller.MotoManagerController  : List moto: com.betacom.fe.response.Response@73c5f62a
+2024-08-06T09:46:23.424+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-7] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/veicolo/listAll?cat=auto
+2024-08-06T09:46:25.070+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-9] c.b.fe.controller.AutoManagerController  : veicoloDTO: 4
+2024-08-06T09:46:25.071+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-9] c.b.fe.controller.AutoManagerController  : veicoloReq: 4
+2024-08-06T09:46:25.071+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-9] c.b.fe.controller.AutoManagerController  : veicoloDTO: utilitaria
+2024-08-06T09:46:25.071+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-9] c.b.fe.controller.AutoManagerController  : veicoloReq: utilitaria
+2024-08-06T09:46:32.511+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : id: 12
+2024-08-06T09:46:32.512+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/auto/updateAuto
+2024-08-06T09:46:32.579+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : RC Errore in veicolo -> Colore non trovato
+2024-08-06T09:46:32.581+02:00 ERROR 508 --- [fe] [http-nio-9090-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-9090-exec-1] Exception processing template "Messaggio Errore: Errore in veicolo -> Colore non trovato": Error resolving template [Messaggio Errore: Errore in veicolo -> Colore non trovato], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [Messaggio Errore: Errore in veicolo -> Colore non trovato], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-08-06T09:46:32.589+02:00 ERROR 508 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [Messaggio Errore: Errore in veicolo -> Colore non trovato], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [Messaggio Errore: Errore in veicolo -> Colore non trovato], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-08-06T09:50:02.750+02:00  INFO 508 --- [fe] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06T09:50:02.999+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 508 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T09:50:03.000+02:00 DEBUG 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T09:50:03.000+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T09:50:03.281+02:00  INFO 508 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T09:50:03.282+02:00  INFO 508 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T09:50:03.282+02:00  INFO 508 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T09:50:03.297+02:00  INFO 508 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T09:50:03.298+02:00  INFO 508 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 295 ms
+2024-08-06T09:50:03.403+02:00  WARN 508 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-06T09:50:03.422+02:00  INFO 508 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T09:50:03.426+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 0.452 seconds (process running for 1069.323)
+2024-08-06T09:50:03.428+02:00  INFO 508 --- [fe] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-06T09:50:27.143+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T09:50:27.144+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T09:50:27.145+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-06T09:50:27.150+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : id: 12
+2024-08-06T09:50:27.151+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/auto/updateAuto
+2024-08-06T09:50:27.206+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : RC Errore in veicolo -> Colore non trovato
+2024-08-06T09:52:12.233+02:00  INFO 508 --- [fe] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06T09:52:12.435+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 508 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T09:52:12.436+02:00 DEBUG 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T09:52:12.436+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T09:52:12.655+02:00  INFO 508 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T09:52:12.656+02:00  INFO 508 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T09:52:12.656+02:00  INFO 508 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T09:52:12.675+02:00  INFO 508 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T09:52:12.676+02:00  INFO 508 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 237 ms
+2024-08-06T09:52:12.753+02:00  WARN 508 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-06T09:52:12.762+02:00  INFO 508 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T09:52:12.766+02:00  INFO 508 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 0.352 seconds (process running for 1198.662)
+2024-08-06T09:52:12.768+02:00  INFO 508 --- [fe] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-06T09:52:17.296+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T09:52:17.297+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T09:52:17.298+02:00  INFO 508 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-06T09:52:17.303+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : id: 12
+2024-08-06T09:52:17.305+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/auto/updateAuto
+2024-08-06T09:52:17.361+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.AutoManagerController  : RC Errore in veicolo -> Colore non trovato
+2024-08-06T09:52:29.826+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.AutoManagerController  : id: 12
+2024-08-06T09:52:29.827+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/auto/updateAuto
+2024-08-06T09:52:29.904+02:00 DEBUG 508 --- [fe] [http-nio-9090-exec-4] c.b.fe.controller.AutoManagerController  : 
+URI: http://localhost:8080/rest/veicolo/listAll?cat=auto
+2024-08-06T10:34:10.316+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 7240 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T10:34:10.320+02:00 DEBUG 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T10:34:10.322+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T10:34:10.378+02:00  INFO 7240 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06T10:34:10.379+02:00  INFO 7240 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06T10:34:11.638+02:00  INFO 7240 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T10:34:11.654+02:00  INFO 7240 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T10:34:11.655+02:00  INFO 7240 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T10:34:11.728+02:00  INFO 7240 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T10:34:11.729+02:00  INFO 7240 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1349 ms
+2024-08-06T10:34:12.214+02:00  WARN 7240 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-06T10:34:12.258+02:00  INFO 7240 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T10:34:12.274+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 2.412 seconds (process running for 2.845)
+2024-08-06T10:34:25.686+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T10:34:25.687+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T10:34:25.690+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-06T10:34:25.744+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-2] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:34:31.071+02:00 ERROR 7240 --- [fe] [http-nio-9090-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-9090-exec-1] Exception processing template "create-bici": An error happened during template parsing (template: "class path resource [templates/create-bici.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/create-bici.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: org.attoparser.ParseException: Error during execution of processor 'org.thymeleaf.spring6.processor.SpringInputGeneralFieldTagProcessor' (template: "create-bici" - line 13, col 25)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Error during execution of processor 'org.thymeleaf.spring6.processor.SpringInputGeneralFieldTagProcessor' (template: "create-bici" - line 13, col 25)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:117) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	... 50 common frames omitted
+Caused by: java.lang.IllegalStateException: Neither BindingResult nor plain target object for bean name 'veicolo' available as request attribute
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:153) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:926) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.thymeleaf.spring6.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:232) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:253) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:227) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.processor.AbstractSpringFieldTagProcessor.doProcess(AbstractSpringFieldTagProcessor.java:174) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 63 common frames omitted
+
+2024-08-06T10:34:31.080+02:00 ERROR 7240 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/create-bici.html]")] with root cause
+
+java.lang.IllegalStateException: Neither BindingResult nor plain target object for bean name 'veicolo' available as request attribute
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:153) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:926) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.thymeleaf.spring6.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:232) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:253) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:227) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.processor.AbstractSpringFieldTagProcessor.doProcess(AbstractSpringFieldTagProcessor.java:174) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-08-06T10:35:30.789+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:35:31.016+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:35:31.028+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-7] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:36:18.916+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:36:20.501+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:36:20.589+02:00 ERROR 7240 --- [fe] [http-nio-9090-exec-5] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-9090-exec-5] Exception processing template "update-bici": An error happened during template parsing (template: "class path resource [templates/update-bici.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/update-bici.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: org.attoparser.ParseException: Error during execution of processor 'org.thymeleaf.spring6.processor.SpringInputGeneralFieldTagProcessor' (template: "update-bici" - line 15, col 25)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Error during execution of processor 'org.thymeleaf.spring6.processor.SpringInputGeneralFieldTagProcessor' (template: "update-bici" - line 15, col 25)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:117) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	... 50 common frames omitted
+Caused by: java.lang.IllegalStateException: Neither BindingResult nor plain target object for bean name 'veicolo' available as request attribute
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:153) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:926) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.thymeleaf.spring6.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:232) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:253) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:227) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.processor.AbstractSpringFieldTagProcessor.doProcess(AbstractSpringFieldTagProcessor.java:174) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 63 common frames omitted
+
+2024-08-06T10:36:20.591+02:00 ERROR 7240 --- [fe] [http-nio-9090-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/update-bici.html]")] with root cause
+
+java.lang.IllegalStateException: Neither BindingResult nor plain target object for bean name 'veicolo' available as request attribute
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:153) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:926) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.thymeleaf.spring6.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:232) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:253) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.util.FieldUtils.getBindStatus(FieldUtils.java:227) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.processor.AbstractSpringFieldTagProcessor.doProcess(AbstractSpringFieldTagProcessor.java:174) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.7.RELEASE.jar:2.0.7.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-08-06T10:36:40.501+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:36:45.047+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:36:45.121+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:36:45.127+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-9] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:36:51.801+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-2] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:36:55.478+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:36:55.560+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:36:55.565+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-4] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:37:16.586+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:37:23.335+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:37:23.410+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:37:23.417+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-9] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:38:24.418+02:00  INFO 7240 --- [fe] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06T10:38:24.658+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 7240 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T10:38:24.658+02:00 DEBUG 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T10:38:24.659+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T10:38:24.977+02:00  INFO 7240 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T10:38:24.978+02:00  INFO 7240 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T10:38:24.979+02:00  INFO 7240 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T10:38:25.001+02:00  INFO 7240 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T10:38:25.002+02:00  INFO 7240 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 339 ms
+2024-08-06T10:38:25.136+02:00  WARN 7240 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-06T10:38:25.149+02:00  INFO 7240 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T10:38:25.153+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 0.527 seconds (process running for 255.724)
+2024-08-06T10:38:25.156+02:00  INFO 7240 --- [fe] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-06T10:38:30.959+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T10:38:30.960+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T10:38:30.962+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-06T10:38:30.970+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:38:35.567+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:38:35.646+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:38:35.652+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-4] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:40:18.962+02:00  INFO 7240 --- [fe] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06T10:40:19.157+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 7240 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T10:40:19.158+02:00 DEBUG 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T10:40:19.158+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T10:40:19.390+02:00  INFO 7240 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T10:40:19.391+02:00  INFO 7240 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T10:40:19.392+02:00  INFO 7240 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T10:40:19.410+02:00  INFO 7240 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T10:40:19.410+02:00  INFO 7240 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 249 ms
+2024-08-06T10:40:19.509+02:00  WARN 7240 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-08-06T10:40:19.519+02:00  INFO 7240 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T10:40:19.523+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 0.39 seconds (process running for 370.094)
+2024-08-06T10:40:19.525+02:00  INFO 7240 --- [fe] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-06T10:40:50.816+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T10:40:50.817+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T10:40:50.819+02:00  INFO 7240 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-06T10:40:50.824+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.f.c.VeicoloManagerController         : URI
+2024-08-06T10:40:50.915+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.f.c.VeicoloManagerController         : rc: true
+2024-08-06T10:40:50.924+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-2] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T10:40:54.303+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-4] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:40:57.920+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:41:02.541+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:41:02.611+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:41:02.616+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-9] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:43:54.128+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:44:00.148+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:44:00.226+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:44:00.234+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:44:07.443+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:46:21.139+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-2] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:46:21.203+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-2] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:46:21.209+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:46:31.370+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.f.c.VeicoloManagerController         : URI
+2024-08-06T10:46:31.432+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.f.c.VeicoloManagerController         : rc: true
+2024-08-06T10:46:31.438+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T10:46:33.341+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:46:34.547+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-10] c.b.f.c.VeicoloManagerController         : URI
+2024-08-06T10:46:34.601+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-10] c.b.f.c.VeicoloManagerController         : rc: true
+2024-08-06T10:46:34.606+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T10:46:35.606+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:46:36.542+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.f.c.VeicoloManagerController         : URI
+2024-08-06T10:46:36.607+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.f.c.VeicoloManagerController         : rc: true
+2024-08-06T10:46:36.614+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T10:46:37.612+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:46:38.863+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-10] c.b.f.c.VeicoloManagerController         : URI
+2024-08-06T10:46:38.923+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-10] c.b.f.c.VeicoloManagerController         : rc: true
+2024-08-06T10:46:38.931+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T10:46:39.864+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:46:40.970+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.f.c.VeicoloManagerController         : URI
+2024-08-06T10:46:41.030+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.f.c.VeicoloManagerController         : rc: true
+2024-08-06T10:46:41.035+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-6] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T10:46:42.252+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:46:43.164+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-10] c.b.f.c.VeicoloManagerController         : URI
+2024-08-06T10:46:43.214+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-10] c.b.f.c.VeicoloManagerController         : rc: true
+2024-08-06T10:46:43.220+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-1] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listAll?cat
+2024-08-06T10:46:46.075+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:47:17.693+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-5] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:47:20.428+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-7] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/create
+2024-08-06T10:47:20.490+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-7] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:47:20.495+02:00 DEBUG 7240 --- [fe] [http-nio-9090-exec-8] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T10:47:32.711+02:00  INFO 7240 --- [fe] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06T10:47:32.922+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 7240 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T10:47:32.922+02:00 DEBUG 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T10:47:32.923+02:00  INFO 7240 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T10:50:36.084+02:00  INFO 19332 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 19332 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T10:50:36.088+02:00 DEBUG 19332 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T10:50:36.089+02:00  INFO 19332 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T10:50:36.178+02:00  INFO 19332 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06T10:50:36.179+02:00  INFO 19332 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06T10:50:37.519+02:00  INFO 19332 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T10:50:37.531+02:00  INFO 19332 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T10:50:37.532+02:00  INFO 19332 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T10:50:37.598+02:00  INFO 19332 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T10:50:37.599+02:00  INFO 19332 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1419 ms
+2024-08-06T10:50:38.365+02:00  INFO 19332 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-06T10:50:38.440+02:00  INFO 19332 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T10:50:38.468+02:00  INFO 19332 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 2.851 seconds (process running for 3.293)
+2024-08-06T10:50:39.930+02:00  INFO 19332 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T10:50:39.931+02:00  INFO 19332 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T10:50:39.937+02:00  INFO 19332 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-06T10:50:40.025+02:00 DEBUG 19332 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:50:40.185+02:00 ERROR 19332 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8080/rest/bici/getByIdBici": Connection refused: connect] with root cause
+
+java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:579) ~[na:na]
+	at java.base/sun.nio.ch.Net.connect(Net.java:568) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:583) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:534) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:639) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:282) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:409) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057) ~[na:na]
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.RestTemplate.getForEntity(RestTemplate.java:447) ~[spring-web-6.1.11.jar:6.1.11]
+	at com.betacom.fe.controller.BiciManagerController.updateMoto(BiciManagerController.java:73) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-08-06T10:51:12.576+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 4844 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T10:51:12.579+02:00 DEBUG 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T10:51:12.581+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T10:51:12.641+02:00  INFO 4844 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06T10:51:12.642+02:00  INFO 4844 --- [fe] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06T10:51:13.879+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T10:51:13.896+02:00  INFO 4844 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T10:51:13.896+02:00  INFO 4844 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T10:51:13.979+02:00  INFO 4844 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T10:51:13.980+02:00  INFO 4844 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1337 ms
+2024-08-06T10:51:14.543+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-06T10:51:14.585+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T10:51:14.596+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 2.455 seconds (process running for 2.925)
+2024-08-06T10:51:19.970+02:00  INFO 4844 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T10:51:19.970+02:00  INFO 4844 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T10:51:19.973+02:00  INFO 4844 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-06T10:51:20.042+02:00 DEBUG 4844 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.BiciManagerController  : URI
+2024-08-06T10:51:24.363+02:00 DEBUG 4844 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : uri:http://localhost:8080/rest/bici/updateBici
+2024-08-06T10:51:24.630+02:00 DEBUG 4844 --- [fe] [http-nio-9090-exec-3] c.b.fe.controller.BiciManagerController  : rc:true
+2024-08-06T10:51:24.638+02:00 DEBUG 4844 --- [fe] [http-nio-9090-exec-4] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T11:06:09.466+02:00  INFO 4844 --- [fe] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06T11:06:09.683+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 4844 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T11:06:09.683+02:00 DEBUG 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T11:06:09.683+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T11:06:09.928+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T11:06:09.930+02:00  INFO 4844 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T11:06:09.930+02:00  INFO 4844 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T11:06:09.951+02:00  INFO 4844 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T11:06:09.951+02:00  INFO 4844 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 265 ms
+2024-08-06T11:06:10.088+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-06T11:06:10.100+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T11:06:10.105+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 0.456 seconds (process running for 898.434)
+2024-08-06T11:06:10.110+02:00  INFO 4844 --- [fe] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-06T11:28:11.044+02:00  INFO 4844 --- [fe] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-06T11:28:11.233+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Starting FeApplication using Java 17.0.11 with PID 4844 (C:\Users\Betacom\Desktop\AcademyJava - Copia\fe\target\classes started by Betacom in C:\Users\Betacom\Desktop\AcademyJava - Copia\fe)
+2024-08-06T11:28:11.234+02:00 DEBUG 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-06T11:28:11.234+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T11:28:11.493+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-08-06T11:28:11.494+02:00  INFO 4844 --- [fe] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T11:28:11.495+02:00  INFO 4844 --- [fe] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T11:28:11.515+02:00  INFO 4844 --- [fe] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T11:28:11.515+02:00  INFO 4844 --- [fe] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 278 ms
+2024-08-06T11:28:11.617+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-06T11:28:11.633+02:00  INFO 4844 --- [fe] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-08-06T11:28:11.636+02:00  INFO 4844 --- [fe] [restartedMain] com.betacom.fe.FeApplication             : Started FeApplication in 0.428 seconds (process running for 2219.965)
+2024-08-06T11:28:11.638+02:00  INFO 4844 --- [fe] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-06T11:30:05.935+02:00  INFO 4844 --- [fe] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T11:30:05.935+02:00  INFO 4844 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T11:30:05.936+02:00  INFO 4844 --- [fe] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-06T11:30:05.940+02:00 DEBUG 4844 --- [fe] [http-nio-9090-exec-1] c.b.fe.controller.BiciManagerController  : Uri: http://localhost:8080/rest/veicolo/listAll?cat=bici
+2024-08-06T11:30:07.666+02:00 DEBUG 4844 --- [fe] [http-nio-9090-exec-3] c.b.f.c.VeicoloManagerController         : Uri: http://localhost:8080/rest/veicolo/listVeicoli

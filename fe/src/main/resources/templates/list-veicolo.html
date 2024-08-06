@@ -13,6 +13,9 @@
         <table class="center">
             <thead>
             <tr>
+                 <th>Id auto</th>
+                 <th>Id moto</th>
+                 <th>Id bici</th>
                 <th>Numero ruote</th>
                 <th>Numero posti</th>
                 <th>Alimentazione</th>
@@ -24,6 +27,9 @@
             </thead>
             <tbody>
                 <tr th:each="veicolo : ${listVeicolo.dati}">
+                	<td th:text="${veicolo.idAuto}"></td>
+                	<td th:text="${veicolo.idMoto}"></td>
+               		 <td th:text="${veicolo.idBici}"></td>
                     <td th:text="${veicolo.numeroRuote}"></td>
                     <td th:text="${veicolo.numeroPosti}"></td>
                     <td th:text="${veicolo.alimentazione}"></td>
