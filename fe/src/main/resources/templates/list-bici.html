@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/style.css">
+<title>Project Car JPA</title>
+</head>
+<body>
+	<nav
+		th:insert="~{fragments/navigation :: block-navigation('Elenco biciclette')}"></nav>
+	<div align="center">
+		<a th:href="@{/createBici}">Create Bici</a>
+	</div>
+	<br>
+	<div>
+		<table align="center">
+			<thead>
+				<th>Numero ruote</th>
+				<th>Numero posti</th>
+				<th>Alimentazione</th>
+				<th>Colore</th>
+				<th>Marca</th>
+				<th>Tipologia</th>
+				<th>pedalataAssistita</th>
+				<th>pieghevole</th>
+				<th>ammortizzatore</th>
+				<th>Azione</th>
+			</thead>
+			<tbody>
+				<tr th:each="bici : ${listVeicolo.dati}">
+					<td th:if="${bici != null}" th:text="${bici.numeroRuote}"></td>
+					<td th:if="${bici != null}" th:text="${bici.numeroPosti}"></td>
+					<td th:if="${bici != null}" th:text="${bici.alimentazione}"></td>
+					<td th:if="${bici != null}" th:text="${bici.colore}"></td>
+					<td th:if="${bici != null}" th:text="${bici.marca}"></td>
+					<td th:if="${bici != null}" th:text="${bici.tipo}"></td>
+					<td th:if="${bici != null}" th:text="${bici.pedalataAssistita}"></td>
+					<td th:if="${bici != null}" th:text="${bici.pieghevole}"></td>
+					<td th:if="${bici != null}" th:text="${bici.ammortizzatore}"></td>
+					<td th:if="${bici != null}"><a
+						th:href="@{/createBici(idVeicolo=${bici.idVeicolo})}">Update</a>
+						<a th:href="@{/removeVeicolo(veicoloID=${bici.idVeicolo})}">Remove</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

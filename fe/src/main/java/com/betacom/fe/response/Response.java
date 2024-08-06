@@ -2,7 +2,8 @@ package com.betacom.fe.response;
 
 import java.util.List;
 
-public class Response<T> extends ResponseBase{
+public class Response <T> extends ResponseBase {
+
 	private List<T> dati;
 
 	public List<T> getDati() {
@@ -11,5 +12,5 @@ public class Response<T> extends ResponseBase{
 
 	public void setDati(List<T> dati) {
 		this.dati = dati;
-	}   
+	}
 }

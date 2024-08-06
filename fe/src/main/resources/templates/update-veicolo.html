@@ -1,0 +1,62 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project Car JPA</title>
+</head>
+<body>
+<div>
+<nav th:insert= "~{fragments/navigation :: block-navigation('Elenco veicoli')}"></nav>
+<h2 align="center">Modificare veicolo</h2>
+	<div class="container">
+		<h3 class="description">Inserire modifiche da effettuare</h3>
+		<form class="form_content" th:action="@{/saveVeicolo}"
+			th:object="${veicolo}" method="post">
+			<input type="hidden" th:field="*{idVeicolo}" />
+			<table style="border: 0">
+				<tr>
+					<td><label for="Numero Ruote">Numero Ruote</label></td>
+					<td><input type="text" th:field="*{numeroRuote}" placeholder="Numero Ruote"
+						required><br></td>
+				</tr>
+				<tr>
+					<td><label for="Numero Posti">Numero Posti:</label></td>
+					<td><input type="text" th:field="*{numeroPosti}"
+						placeholder="Numero Posti" required><br></td>
+				</tr>
+				<tr>
+					<td><label for="Alimentazione">alimetazione:</label></td>
+					<td><input type="text" th:field="*{alimentazione}"
+						placeholder="alimentazione" required><br></td>
+					<!-- 						required obbliga a inserire i dati -->
+				</tr>
+				<tr>
+					<td><label for="Colore">colore:</label></td>
+					<td><input type="text" th:field="*{colore}"
+						placeholder="colore" required><br></td>
+					<!-- 						required obbliga a inserire i dati -->
+				</tr>
+				<tr>
+					<td><label for="Marca">marca:</label></td>
+					<td><input type="text" th:field="*{marca}"
+						placeholder="marca" required><br></td>
+					<!-- 						required obbliga a inserire i dati -->
+				</tr>
+				<tr>
+					<td><label for="Tipo">tipo:</label></td>
+					<td><input type="text" th:field="*{tipoVeicolo}"
+						placeholder="tipo" required><br></td>
+					<!-- 						required obbliga a inserire i dati -->
+				</tr>
+				
+			</table>
+			<button type="submit">Modifica veicolo</button>
+			<div class="container-error" th:if="*{errorMSG} != null">
+				<span th:text="*{errorMSG}" style="color: red">***</span>
+			</div>
+
+		</form>
+</div>
+</div>
+</body>
+</html>

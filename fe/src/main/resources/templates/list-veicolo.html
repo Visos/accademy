@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project Car JPA</title>
+</head>
+<body>
+    <nav th:insert= "~{fragments/navigation :: block-navigation('Elenco veicoli')}"></nav>
+    <br>
+    <div>
+        <table class="center">
+            <thead>
+            <tr>
+                <th>Numero ruote</th>
+                <th>Numero posti</th>
+                <th>Alimentazione</th>
+                <th>Colore</th>
+                <th>Marca</th>
+                <th>Tipologia</th>
+<!--                 <th>Azione</th> -->
+              </tr>
+            </thead>
+            <tbody>
+                <tr th:each="veicolo : ${listVeicolo.dati}">
+                    <td th:text="${veicolo.numeroRuote}"></td>
+                    <td th:text="${veicolo.numeroPosti}"></td>
+                    <td th:text="${veicolo.alimentazione}"></td>
+                    <td th:text="${veicolo.colore}"></td>
+                    <td th:text="${veicolo.marca}"></td>
+                    <td th:text="${veicolo.tipo}"></td>
+<!--                     <td> -->
+<!--                         <a th:href="@{/updateVeicolo(veicoloID=${veicolo.idVeicolo})}">Update</a> -->
+<!--                         <a th:href="@{/removeVeicolo(veicoloID=${veicolo.idVeicolo})}">Remove</a> -->
+<!--                     </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

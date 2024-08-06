@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project Car JPA</title>
+</head>
+<body>
+    <nav th:insert= "~{fragments/navigation :: block-navigation('Elenco auto')}"></nav>
+    <div align="center" th:if=" ${funzione == 'list'} ">
+        <a th:href="@{/createAuto}" class="buttonlike">Create auto</a>
+    </div>
+    <br>    
+    <div>
+        <table align="center">
+            <thead>
+                <th>Numero ruote</th>
+                <th>Numero posti</th>
+                <th>Alimentazione</th>
+                <th>Colore</th>
+                <th>Marca</th>
+                <th>Tipologia</th>
+                <th>Numero porte</th>
+                <th>Targa</th>
+                <th>Cilindrata</th>
+                <th>Kilowatt</th>
+                <th th:if=" ${funzione == 'list'} ">Azione</th>
+            </thead>
+            <tbody>
+                <tr th:each="a : ${auto.dati}">
+                    <td th:if="${a!= null}" th:text="${a.numeroRuote}"></td>
+                    <td th:if="${a!= null}" th:text="${a.numeroPosti}"></td>
+                    <td th:if="${a!= null}" th:text="${a.alimentazione}"></td>
+                    <td th:if="${a!= null}" th:text="${a.colore}"></td>
+                    <td th:if="${a!= null}" th:text="${a.marca}"></td>
+                    <td th:if="${a!= null}" th:text="${a.tipo}"></td>
+                    <td th:if="${a!= null}" th:text="${a.numeroPorte}"></td>
+                    <td th:if="${a!= null}" th:text="${a.targa}"></td>
+                    <td th:if="${a!= null}" th:text="${a.cilindrata}"></td>
+                    <td th:if="${a!= null}" th:text="${a.kilowatt}"></td>
+                    <td th:if=" ${funzione == 'list'} ">
+                        <a th:if="${a!= null}" th:href="@{/removeVeicolo(veicoloID=${a.idVeicolo})}">Remove</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div th:if=" ${funzione == 'remove'} " align="center">
+            <br>
+            <a th:href="@{/forseRemoveAuto}" class="buttonlike">Remove auto</a>
+            <a th:href="@{/carjpa}" class="buttonlike">Cancel operation</a> 
+        </div>
+    </div>
+</body>
+</html>

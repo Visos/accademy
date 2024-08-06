@@ -1,0 +1,78 @@
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="../css/style.css">
+	<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+	<nav th:insert = "~{fragments/navigation :: block-navigation('Create bici')}"></nav>
+
+	<div class="container">
+		<h3 class="description">Inserire i dati relativi alla bici</h3>
+		 <form class="form_content" th:action="@{/saveBici}" th:object="${veicolo}" method="post">
+			<input type="hidden" th:field="*{idVeicolo}" />
+			<table style="border: 0">
+			
+			
+			
+				<tr>
+					<td><label for="numeroRuote">numeroRuote:</label></td>
+					<td><input type="number" th:field="*{numeroRuote}" placeholder="numeroRuote"
+						required><br></td>
+				</tr>
+				<tr>
+				<td><label for="numeroPosti">numeroPosti:</label></td>
+				<td><input type="number" th:field="*{numeroPosti}"
+					placeholder="numeroPosti" required><br></td>
+				</tr>
+				
+				<tr>
+					<td><label for="alimentazione">alimentazione:</label></td>
+					<td><input type="text" th:field="*{alimentazione}"
+						placeholder="alimentazione" required><br></td>
+				</tr>
+				<tr>
+					<td><label for="colore">colore:</label></td>
+					<td><input type="text" th:field="*{colore}"
+						placeholder="colore" required><br></td>
+				</tr>
+				<tr>
+					<td><label for="marca">marca:</label></td>
+					<td><input type="text" th:field="*{marca}"
+						placeholder="marca" required><br></td>
+				</tr>
+				<tr>
+					<td><label for="tipoVeicolo">tipoVeicolo:</label></td>
+					<td><input type="text" th:field="*{tipoVeicolo}"
+						placeholder="tipoVeicolo" required><br></td>
+				</tr>
+				<tr>
+					<td><label for="pedalataAssistita">pedalataAssistita:</label></td>
+					<td><input type="checkbox" th:field="*{pedalataAssistita}"
+						placeholder="pedalataAssistita"><br></td>
+				</tr>
+				<tr>
+					<td><label for="pieghevole">pieghevole:</label></td>
+					<td><input name="boolean-parameter" type="checkbox" th:field="*{pieghevole}"
+						placeholder="pieghevole"><br></td>
+				</tr>
+				<tr>
+					<td><label for="ammortizzatore">ammortizzatore:</label></td>
+					<td><input name="boolean-parameter" type="checkbox" th:field="*{ammortizzatore}"
+						placeholder="ammortizzatore"><br></td>
+				</tr>
+				
+
+			</table>
+            <button type="submit">Inserisci bici</button>
+           <div class="container-error" th:if="*{errorMsg} != null">
+				<span th:text="*{errorMsg}" style="color:red">***</span>
+			</div>
+        
+        </form>
+
+		
+	
+	</div>
+</body>
+</html>

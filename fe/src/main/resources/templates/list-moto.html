@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project Car JPA</title>
+</head>
+<body>
+    <nav th:insert= "~{fragments/navigation :: block-navigation('Elenco moto')}"></nav>
+    <div align="center">
+        <a th:href="@{/createMoto}">Create</a>
+    </div>
+    <br>
+    <div>
+        <table align="center">
+            <thead>
+                <th>Cilindrata</th>
+                <th>Kilowatt</th>
+                <th>Targa</th>
+                <th>Numero ruote</th>
+                <th>Numero posti</th>
+                <th>Alimentazione</th>
+                <th>Colore</th>
+                <th>Marca</th>
+                <th>Tipologia</th>
+                <th>Azioni</th>
+            </thead>
+            <tbody>
+                <tr th:each="moto : ${listMoto.dati}">
+                    <td th:if="${moto != null}" th:text="${moto.cilindrata}"></td>
+                    <td th:if="${moto != null}" th:text="${moto.kilowatt}"></td>
+                    <td th:if="${moto != null}" th:text="${moto.targa}"></td>
+                    <td th:if="${moto != null}" th:text="${moto.numeroRuote}"></td>
+                    <td th:if="${moto != null}" th:text="${moto.numeroPosti}"></td>
+                    <td th:if="${moto != null}" th:text="${moto.alimentazione}"></td>
+                    <td th:if="${moto != null}" th:text="${moto.colore}"></td>
+                    <td th:if="${moto != null}" th:text="${moto.marca}"></td>
+                    <td th:if="${moto != null}" th:text="${moto.tipo}"></td>
+                    <td th:if="${moto != null}">
+                        <a th:href="@{/updateMoto(motoID=${moto.motoID})}">Update</a>
+                        <a th:href="@{/removeVeicolo(veicoloID=${moto.idVeicolo})}">Remove</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
