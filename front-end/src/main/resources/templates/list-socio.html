@@ -1,0 +1,47 @@
+<html lang="it" xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+
+	<h1 align="center">Project JPA</h1>
+	<nav th:insert="~{fragments/navigation :: block-navigation('Indice:')}"></nav>
+
+	<h2 align="center">Elenco Soci</h2>
+
+	<!--avviso thymeleaf che ci stiamo riferendo a un'altra pagina: URL di createSocio = @{/....} -->
+	<div align="center">
+			<a th:href="@{/createSocio}"> Create</a>
+	</div>
+	<br>
+	<div>
+		<table class="center">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Codice fiscale</th>
+					<th>Data Certificato</th>
+					<th>Tipo Certificato</th>
+					<th>Azione</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="socio : ${listSocio.dati}">
+					<td th:text="${socio.nome}"></td>
+					<td th:text="${socio.cognome}"></td>
+					<td th:text="${socio.cf}"></td>
+					<td th:text="${socio.certificato.dataCertificato}"></td>
+					<td th:text="${socio.certificato.tipo}"></td>
+					<td><a th:href="@{/updateSocio(socioID=${socio.id})}">Update</a>
+						<a th:href="@{/listAbbonamenti(socioID=${socio.id})}">Abbonamento</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!--     <p>This is a paragraph on my awesome webpage.</p> -->
+</body>
+</html>

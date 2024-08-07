@@ -1,0 +1,277 @@
+2024-08-07T09:51:57.978+02:00  INFO 17912 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Starting FrontEndApplication using Java 17.0.11 with PID 17912 (C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end\target\classes started by raimo in C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end)
+2024-08-07T09:51:57.982+02:00 DEBUG 17912 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-07T09:51:57.984+02:00  INFO 17912 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T09:51:58.144+02:00  INFO 17912 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-07T09:51:58.148+02:00  INFO 17912 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-07T09:52:01.292+02:00  INFO 17912 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-07T09:52:01.322+02:00  INFO 17912 --- [front-end] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T09:52:01.323+02:00  INFO 17912 --- [front-end] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T09:52:01.461+02:00  INFO 17912 --- [front-end] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-07T09:52:01.464+02:00  INFO 17912 --- [front-end] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3312 ms
+2024-08-07T09:52:02.420+02:00  INFO 17912 --- [front-end] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-07T09:52:02.891+02:00  INFO 17912 --- [front-end] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e75957f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73abf720, org.springframework.security.web.context.SecurityContextHolderFilter@5c7323a6, org.springframework.security.web.header.HeaderWriterFilter@5ecab2b, org.springframework.web.filter.CorsFilter@11fbc82, org.springframework.security.web.csrf.CsrfFilter@68b97812, org.springframework.security.web.authentication.logout.LogoutFilter@13cb9963, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d464283, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70a2bc57, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2267ea25, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41e352f, org.springframework.security.web.access.ExceptionTranslationFilter@578eee2e, org.springframework.security.web.access.intercept.AuthorizationFilter@65b2768a]
+2024-08-07T09:52:03.308+02:00  INFO 17912 --- [front-end] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T09:52:03.379+02:00  INFO 17912 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-07T09:52:03.411+02:00  INFO 17912 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Started FrontEndApplication in 6.289 seconds (process running for 6.992)
+2024-08-07T11:38:55.539+02:00  INFO 11664 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Starting FrontEndApplication using Java 17.0.11 with PID 11664 (C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end\target\classes started by raimo in C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end)
+2024-08-07T11:38:55.546+02:00 DEBUG 11664 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-07T11:38:55.553+02:00  INFO 11664 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T11:38:55.803+02:00  INFO 11664 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-07T11:38:55.819+02:00  INFO 11664 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-07T11:38:59.946+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-07T11:38:59.989+02:00  INFO 11664 --- [front-end] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T11:38:59.993+02:00  INFO 11664 --- [front-end] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T11:39:00.228+02:00  INFO 11664 --- [front-end] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-07T11:39:00.231+02:00  INFO 11664 --- [front-end] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4403 ms
+2024-08-07T11:39:02.228+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-07T11:39:02.617+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f6f97bc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ff24af7, org.springframework.security.web.context.SecurityContextHolderFilter@6828e5f9, org.springframework.security.web.header.HeaderWriterFilter@6005b886, org.springframework.web.filter.CorsFilter@6aa9b3ef, org.springframework.security.web.csrf.CsrfFilter@ed43b7, org.springframework.security.web.authentication.logout.LogoutFilter@2ffebaab, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@336f95dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22c7deac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66629543, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43199885, org.springframework.security.web.access.ExceptionTranslationFilter@4f1bcca2, org.springframework.security.web.access.intercept.AuthorizationFilter@666b7d2]
+2024-08-07T11:39:03.146+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T11:39:03.275+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-07T11:39:03.333+02:00  INFO 11664 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Started FrontEndApplication in 9.613 seconds (process running for 11.771)
+2024-08-07T11:39:03.635+02:00  INFO 11664 --- [front-end] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07T11:39:03.641+02:00  INFO 11664 --- [front-end] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-07T11:39:03.646+02:00  INFO 11664 --- [front-end] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-07T11:39:03.968+02:00  WARN 11664 --- [front-end] [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [151] milliseconds.
+2024-08-07T11:39:25.474+02:00 DEBUG 11664 --- [front-end] [http-nio-8080-exec-4] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T11:40:12.536+02:00 DEBUG 11664 --- [front-end] [http-nio-8080-exec-2] c.b.f.c.AmministrazioneAttivita          : 
+saveUtente -> 
+ - username: Michele
+ - password: otta
+ - role: ADMIN
+2024-08-07T11:40:12.539+02:00 DEBUG 11664 --- [front-end] [http-nio-8080-exec-2] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/utente/create
+2024-08-07T11:40:12.770+02:00 DEBUG 11664 --- [front-end] [http-nio-8080-exec-3] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T11:40:27.097+02:00 DEBUG 11664 --- [front-end] [http-nio-8080-exec-9] c.b.f.c.AmministrazioneAttivita          : 
+saveUtente -> 
+ - username: Alessia
+ - password: alessia
+ - role: USER
+2024-08-07T11:40:27.100+02:00 DEBUG 11664 --- [front-end] [http-nio-8080-exec-9] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/utente/create
+2024-08-07T11:40:27.151+02:00 DEBUG 11664 --- [front-end] [http-nio-8080-exec-5] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T11:42:53.431+02:00 DEBUG 11664 --- [front-end] [http-nio-8080-exec-4] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T11:43:43.331+02:00  INFO 11664 --- [front-end] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07T11:43:43.952+02:00  INFO 11664 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Starting FrontEndApplication using Java 17.0.11 with PID 11664 (C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end\target\classes started by raimo in C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end)
+2024-08-07T11:43:43.955+02:00 DEBUG 11664 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-07T11:43:43.958+02:00  INFO 11664 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T11:43:44.846+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-07T11:43:44.849+02:00  INFO 11664 --- [front-end] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T11:43:44.851+02:00  INFO 11664 --- [front-end] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T11:43:44.912+02:00  INFO 11664 --- [front-end] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-07T11:43:44.913+02:00  INFO 11664 --- [front-end] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 946 ms
+2024-08-07T11:43:46.112+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-07T11:43:46.327+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@642bffbd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@323a9a89, org.springframework.security.web.context.SecurityContextHolderFilter@3c65f4ee, org.springframework.security.web.header.HeaderWriterFilter@265a739a, org.springframework.web.filter.CorsFilter@753ac9f, org.springframework.security.web.csrf.CsrfFilter@7a2e7950, org.springframework.security.web.authentication.logout.LogoutFilter@3a7f09bd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@26db383a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3588fecb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c1d3448, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78364ea7, org.springframework.security.web.access.ExceptionTranslationFilter@28f83092, org.springframework.security.web.access.intercept.AuthorizationFilter@7df904bd]
+2024-08-07T11:43:46.466+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T11:43:46.501+02:00  INFO 11664 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-07T11:43:46.507+02:00  INFO 11664 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Started FrontEndApplication in 2.624 seconds (process running for 294.946)
+2024-08-07T11:43:46.511+02:00  INFO 11664 --- [front-end] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-07T11:43:49.747+02:00  INFO 6284 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Starting FrontEndApplication using Java 17.0.11 with PID 6284 (C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end\target\classes started by raimo in C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end)
+2024-08-07T11:43:49.755+02:00 DEBUG 6284 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-07T11:43:49.766+02:00  INFO 6284 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T11:43:49.948+02:00  INFO 6284 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-07T11:43:49.951+02:00  INFO 6284 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-07T11:43:53.532+02:00  INFO 6284 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-07T11:43:53.571+02:00  INFO 6284 --- [front-end] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T11:43:53.572+02:00  INFO 6284 --- [front-end] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T11:43:53.713+02:00  INFO 6284 --- [front-end] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-07T11:43:53.714+02:00  INFO 6284 --- [front-end] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3757 ms
+2024-08-07T11:43:55.182+02:00  INFO 6284 --- [front-end] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-07T11:43:55.669+02:00  INFO 6284 --- [front-end] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@46f0c5bb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@130ad294, org.springframework.security.web.context.SecurityContextHolderFilter@6005b886, org.springframework.security.web.header.HeaderWriterFilter@757d6734, org.springframework.web.filter.CorsFilter@20e13f00, org.springframework.security.web.csrf.CsrfFilter@502f22c3, org.springframework.security.web.authentication.logout.LogoutFilter@6552b089, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@294b8437, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f309ac0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25a4b1f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f6f97bc, org.springframework.security.web.access.ExceptionTranslationFilter@5924564d, org.springframework.security.web.access.intercept.AuthorizationFilter@628af6dd]
+2024-08-07T11:43:56.192+02:00  INFO 6284 --- [front-end] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T11:43:56.318+02:00  INFO 6284 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-07T11:43:56.363+02:00  INFO 6284 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Started FrontEndApplication in 7.482 seconds (process running for 8.524)
+2024-08-07T11:44:10.056+02:00  INFO 6284 --- [front-end] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07T11:44:10.058+02:00  INFO 6284 --- [front-end] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-07T11:44:10.062+02:00  INFO 6284 --- [front-end] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-07T11:44:10.331+02:00  WARN 6284 --- [front-end] [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [103] milliseconds.
+2024-08-07T11:44:19.916+02:00 DEBUG 6284 --- [front-end] [http-nio-8080-exec-6] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T11:44:34.410+02:00 DEBUG 6284 --- [front-end] [http-nio-8080-exec-9] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T11:44:45.030+02:00 DEBUG 6284 --- [front-end] [http-nio-8080-exec-10] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T11:45:02.639+02:00 DEBUG 6284 --- [front-end] [http-nio-8080-exec-9] c.b.f.c.AmministrazioneAttivita          : 
+saveUtente -> 
+ - username: Francesca
+ - password: fra
+ - role: ADMIN
+2024-08-07T11:45:02.642+02:00 DEBUG 6284 --- [front-end] [http-nio-8080-exec-9] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/utente/create
+2024-08-07T11:45:02.824+02:00 DEBUG 6284 --- [front-end] [http-nio-8080-exec-2] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T11:45:23.195+02:00  INFO 19764 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Starting FrontEndApplication using Java 17.0.11 with PID 19764 (C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end\target\classes started by raimo in C:\Users\raimo\OneDrive\Betacom\Esercitazioni\projectJPA-front-end)
+2024-08-07T11:45:23.208+02:00 DEBUG 19764 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-07T11:45:23.211+02:00  INFO 19764 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T11:45:23.321+02:00  INFO 19764 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-07T11:45:23.323+02:00  INFO 19764 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-07T11:45:26.589+02:00  INFO 19764 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-07T11:45:26.618+02:00  INFO 19764 --- [front-end] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T11:45:26.619+02:00  INFO 19764 --- [front-end] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T11:45:26.754+02:00  INFO 19764 --- [front-end] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-07T11:45:26.756+02:00  INFO 19764 --- [front-end] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3428 ms
+2024-08-07T11:45:28.007+02:00  INFO 19764 --- [front-end] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-07T11:45:28.385+02:00  INFO 19764 --- [front-end] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53a534b4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7df78c9f, org.springframework.security.web.context.SecurityContextHolderFilter@37055c83, org.springframework.security.web.header.HeaderWriterFilter@5c352528, org.springframework.web.filter.CorsFilter@1aa99fa8, org.springframework.security.web.csrf.CsrfFilter@33dc6b11, org.springframework.security.web.authentication.logout.LogoutFilter@6196d494, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@106ebbc4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42930d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f790894, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c260479, org.springframework.security.web.access.ExceptionTranslationFilter@22638b4, org.springframework.security.web.access.intercept.AuthorizationFilter@12aca7fc]
+2024-08-07T11:45:28.857+02:00  INFO 19764 --- [front-end] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T11:45:28.947+02:00  INFO 19764 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-07T11:45:28.970+02:00  INFO 19764 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Started FrontEndApplication in 6.686 seconds (process running for 7.615)
+2024-08-07T11:45:37.591+02:00  INFO 19764 --- [front-end] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07T11:45:37.596+02:00  INFO 19764 --- [front-end] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-07T11:45:37.607+02:00  INFO 19764 --- [front-end] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2024-08-07T11:45:49.835+02:00 DEBUG 19764 --- [front-end] [http-nio-8080-exec-4] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T12:12:43.246+02:00  INFO 5012 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Starting FrontEndApplication using Java 17.0.10 with PID 5012 (C:\Users\Betacom\Documents\GitHub\accademy\projectJPA-front-end\target\classes started by Betacom in C:\Users\Betacom\Documents\GitHub\accademy\projectJPA-front-end)
+2024-08-07T12:12:43.249+02:00 DEBUG 5012 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-07T12:12:43.250+02:00  INFO 5012 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T12:12:43.324+02:00  INFO 5012 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-07T12:12:43.325+02:00  INFO 5012 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-07T12:12:44.850+02:00  INFO 5012 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-07T12:12:44.868+02:00  INFO 5012 --- [front-end] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T12:12:44.870+02:00  INFO 5012 --- [front-end] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T12:12:44.947+02:00  INFO 5012 --- [front-end] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-07T12:12:44.948+02:00  INFO 5012 --- [front-end] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1622 ms
+2024-08-07T12:12:45.631+02:00  WARN 5012 --- [front-end] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: Error creating bean with name 'userDetailsService' defined in class path resource [com/betacom/fe/configuration/WebSecurityConfig.class]: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception with message: 500 : "{"timestamp":"2024-08-07T10:12:45.550+00:00","status":500,"error":"Internal Server Error","path":"/rest/utente/list"}"
+2024-08-07T12:12:45.635+02:00  INFO 5012 --- [front-end] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-07T12:12:45.648+02:00  INFO 5012 --- [front-end] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-07T12:12:45.669+02:00 ERROR 5012 --- [front-end] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: Error creating bean with name 'userDetailsService' defined in class path resource [com/betacom/fe/configuration/WebSecurityConfig.class]: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception with message: 500 : "{"timestamp":"2024-08-07T10:12:45.550+00:00","status":500,"error":"Internal Server Error","path":"/rest/utente/list"}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.2.8.jar:3.2.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.2.8.jar:3.2.8]
+	at com.betacom.fe.FrontEndApplication.main(FrontEndApplication.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.8.jar:3.2.8]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: Error creating bean with name 'userDetailsService' defined in class path resource [com/betacom/fe/configuration/WebSecurityConfig.class]: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception with message: 500 : "{"timestamp":"2024-08-07T10:12:45.550+00:00","status":500,"error":"Internal Server Error","path":"/rest/utente/list"}"
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:355) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: Error creating bean with name 'userDetailsService' defined in class path resource [com/betacom/fe/configuration/WebSecurityConfig.class]: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception with message: 500 : "{"timestamp":"2024-08-07T10:12:45.550+00:00","status":500,"error":"Internal Server Error","path":"/rest/utente/list"}"
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsService' defined in class path resource [com/betacom/fe/configuration/WebSecurityConfig.class]: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception with message: 500 : "{"timestamp":"2024-08-07T10:12:45.550+00:00","status":500,"error":"Internal Server Error","path":"/rest/utente/list"}"
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1249) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.getBeanOrNull(InitializeUserDetailsBeanManagerConfigurer.java:89) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:62) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:55) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:376) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:330) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.authenticationManager(HttpSecurityConfiguration.java:141) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity(HttpSecurityConfiguration.java:109) ~[spring-security-config-6.2.5.jar:6.2.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 37 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception with message: 500 : "{"timestamp":"2024-08-07T10:12:45.550+00:00","status":500,"error":"Internal Server Error","path":"/rest/utente/list"}"
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 61 common frames omitted
+Caused by: org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 : "{"timestamp":"2024-08-07T10:12:45.550+00:00","status":500,"error":"Internal Server Error","path":"/rest/utente/list"}"
+	at org.springframework.web.client.HttpServerErrorException.create(HttpServerErrorException.java:102) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:422) ~[spring-web-6.1.11.jar:6.1.11]
+	at com.betacom.fe.configuration.WebSecurityConfig.userDetailsService(WebSecurityConfig.java:60) ~[classes/:na]
+	at com.betacom.fe.configuration.WebSecurityConfig$$SpringCGLIB$$0.CGLIB$userDetailsService$2(<generated>) ~[classes/:na]
+	at com.betacom.fe.configuration.WebSecurityConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:348) ~[spring-context-6.1.11.jar:6.1.11]
+	at com.betacom.fe.configuration.WebSecurityConfig$$SpringCGLIB$$0.userDetailsService(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 62 common frames omitted
+
+2024-08-07T12:19:23.222+02:00  INFO 15820 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Starting FrontEndApplication using Java 17.0.10 with PID 15820 (C:\Users\Betacom\Documents\GitHub\accademy\projectJPA-front-end\target\classes started by Betacom in C:\Users\Betacom\Documents\GitHub\accademy\projectJPA-front-end)
+2024-08-07T12:19:23.225+02:00 DEBUG 15820 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-08-07T12:19:23.228+02:00  INFO 15820 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T12:19:23.289+02:00  INFO 15820 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-07T12:19:23.289+02:00  INFO 15820 --- [front-end] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-07T12:19:24.665+02:00  INFO 15820 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-07T12:19:24.682+02:00  INFO 15820 --- [front-end] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T12:19:24.683+02:00  INFO 15820 --- [front-end] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T12:19:24.770+02:00  INFO 15820 --- [front-end] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-07T12:19:24.771+02:00  INFO 15820 --- [front-end] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1481 ms
+2024-08-07T12:19:25.842+02:00  INFO 15820 --- [front-end] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-07T12:19:26.042+02:00  INFO 15820 --- [front-end] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25fcd4f5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10055d66, org.springframework.security.web.context.SecurityContextHolderFilter@39cbed0b, org.springframework.security.web.header.HeaderWriterFilter@6e8ddb37, org.springframework.web.filter.CorsFilter@2f089cb, org.springframework.security.web.csrf.CsrfFilter@7802f1e0, org.springframework.security.web.authentication.logout.LogoutFilter@51283aca, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4808009e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24a1f300, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67f56d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e0d152c, org.springframework.security.web.access.ExceptionTranslationFilter@666d3504, org.springframework.security.web.access.intercept.AuthorizationFilter@1dcf97a2]
+2024-08-07T12:19:26.271+02:00  INFO 15820 --- [front-end] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T12:19:26.308+02:00  INFO 15820 --- [front-end] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-07T12:19:26.319+02:00  INFO 15820 --- [front-end] [restartedMain] com.betacom.fe.FrontEndApplication       : Started FrontEndApplication in 3.512 seconds (process running for 3.939)
+2024-08-07T12:19:32.902+02:00  INFO 15820 --- [front-end] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07T12:19:32.903+02:00  INFO 15820 --- [front-end] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-07T12:19:32.904+02:00  INFO 15820 --- [front-end] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-07T12:19:39.776+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-8] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T12:19:50.354+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-5] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/attivita/listAll
+2024-08-07T12:19:54.603+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-7] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/attivita/listAll
+2024-08-07T12:19:56.260+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-1] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/attivita/listAll
+2024-08-07T12:19:57.248+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-3] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/attivita/listAll
+2024-08-07T12:20:02.346+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-5] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T12:20:04.378+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-7] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/attivita/listAll
+2024-08-07T12:20:09.782+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-3] c.b.f.controller.SocioManagerController  : 
+URI: http://localhost:9090/rest/socio/list
+2024-08-07T12:20:11.616+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-5] c.b.f.c.AbbonamentoManagerController     : Uri: http://localhost:9090/rest/abbonamento/listBySocio?id=1
+2024-08-07T12:20:14.018+02:00 DEBUG 15820 --- [front-end] [http-nio-8080-exec-7] c.b.f.c.AmministrazioneAttivita          : 
+URI: http://localhost:9090/rest/attivita/listAll

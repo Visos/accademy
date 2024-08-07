@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project JPA</title>
+</head>
+<body>
+    <nav th:insert= "~{fragments/navigation :: block-navigation('Elenco abbonamenti per socio')}"></nav>
+    <div align="center">
+        <a th:href="@{/createAbbonamento(socioID=${socioID})}" class="buttonlike">Create abbonamento</a>
+    </div>
+    <br>
+    <div th:if="${abbonamenti.rc}">
+        <div>
+            <table align="center">
+                <thead>
+                    <th>Data iscrizione</th>
+                    <th>Azione</th>
+                </thead>
+                <tbody>
+                    <tr th:each="abbo : ${abbonamenti.dati}">
+                        <td th:text="${abbo.dataIscrizione}"></td>
+                        <td>
+                            <a th:href="@{/attivitaAbbonamenti(abbID = ${abbo.id}, socioID = ${socioID})}">Attivita</a>
+                            <a th:href="@{/remove(abbID = ${abbo.id}, socioID = ${socioID})}">Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div th:if="${abbonamenti.rc == false}" align="center">
+        <span th:text="${abbonamenti.msg}">***</span>
+    </div>
+</body>
+</html>

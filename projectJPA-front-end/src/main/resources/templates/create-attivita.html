@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleAtt.css">
+    <title>Project JPA</title>
+</head>
+<body>
+    <nav th:insert= "~{fragments/navigation :: block-navigation('Create attivita')}"></nav>
+    <div class="container">
+        <h3>Inserire i dati relativi alla attivita</h3>
+        <form th:action="@{/saveAttivita}" th:object="${attivita}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <div class="table-container">
+                <table class="styled-table">
+                    <td><label for="nome">Nome attivita:</label></td>
+                    <td><input type="text" th:field="*{descrizione}" placeholder="descrizione" required></td>
+                </table>
+                <table>
+                    <button class="btn btn-create" type="submit">Save</button>
+                </table>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

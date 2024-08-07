@@ -1,0 +1,60 @@
+<html lang="it" xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+
+	<nav th:insert="~{fragments/navigation :: block-navigation('Indice:')}"></nav>
+
+	<h2 align="center">Elenco Attività</h2>
+	<div align="center" th:if="${funzione=='list'}">
+		<a th:href="@{/admin/createNewAttivita}">Create</a>
+
+		<div>
+			<br>
+			<table class="center">
+				<thead>
+					<tr>
+						<th>Descrizione</th>
+						<th>Azione</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="attiv : ${attivita.dati}">
+						<td th:text="${attiv.descrizione}"></td>
+						<td><a th:href="@{/admin/updateAttivita(attID=${attiv.id})}">Update</a>
+							<a th:href="@{/admin/removeAttivita(attID=${attiv.id})}">Remove</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div align="center" th:if="${funzione=='remove'}">
+		<table class="center">
+			<thead>
+				<tr>
+					<th>Abbonamento</th>
+					<th>Socio Id</th>
+					<th>Socio Nome</th>
+					<th>Socio Cognome</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="abb : ${attivita.abbonamenti}">
+					<td th:text="${abb.id}"></td>
+					<td th:text="${abb.socioId}"></td>
+					<td th:text="${abb.socioNome}"></td>
+					<td th:text="${abb.socioCognome}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<div align="center">
+			<a th:href="@{/admin/listAttivita}">Return</a>
+		</div>
+	</div>
+
+</body>
+</html>

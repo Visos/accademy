@@ -1,0 +1,55 @@
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+	<nav th:insert="~{fragments/navigation :: block-navigation('Indice:')}"></nav>
+	<div align="center" th:if="${funzione=='create'}">
+	<h2 align="center">Creare nuova attività</h2>
+	<div class="container">
+		<h3 class="description">Inserire i dati relativi alla nuova
+			attività</h3>
+		<form class="form_content" th:action="@{/admin/saveAttivita}"
+			th:object="${attivita}" method="post">
+			<input type="hidden" th:field="*{id}" />
+			<table style="border: 0">
+				<tr>
+					<td><label for="descrizione">Descrizione Attività:</label></td>
+					<td><input type="text" th:field="*{descrizione}"
+						placeholder="Descrizione" required><br></td>
+				</tr>
+			</table>
+			<button type="submit">Registra attività</button>
+			<div class="container-error" th:if="*{errorMSG} != null">
+				<span th:text="*{errorMSG}" style="color: red">***</span>
+			</div>
+
+		</form>
+	</div>
+	</div>
+	<div align="center" th:if="${funzione=='update'}">
+	<h2 align="center">Modificare attività</h2>
+	<div class="container">
+		<h3 class="description">Inserire modifiche da effettuare</h3>
+		<form class="form_content" th:action="@{/admin/saveAttivita}"
+			th:object="${attivita}" method="post">
+			<input type="hidden" th:field="*{id}" />
+			<table style="border: 0">
+				<tr>
+					<td><label for="descrizione">Descrizione Attività:</label></td>
+					<td><input type="text" th:field="*{descrizione}"
+						placeholder="Descrizione" required><br></td>
+				</tr>
+			</table>
+			<button type="submit">Modifica attività</button>
+			<div class="container-error" th:if="*{errorMSG} != null">
+				<span th:text="*{errorMSG}" style="color: red">***</span>
+			</div>
+
+		</form>
+	</div>
+	</div>
+</body>
+</html>

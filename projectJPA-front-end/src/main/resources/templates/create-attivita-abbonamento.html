@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project JPA</title>
+</head>
+<body>
+    <nav th:insert="~{fragments/navigation :: block-navigation('Create attivita per abbonamento')}"></nav>
+    <div class="container">
+        <form th:action="@{/saveAttivitaAbbonamento}" th:object="${attivitaReq}" method="post">
+            <h3>Seleziona Attivita'</h3>
+            <input type="hidden" th:field="*{abbonamentoID}" />
+            <input type="hidden" th:field="*{socioID}" />
+            <select th:field="*{id}">
+                <option th:each="attiv : ${listAttivita.dati}"
+                    th:value="${attiv.id}" th:text="${attiv.descrizione}">
+                </option>
+            </select>
+            <button type="submit">Add attivita'</button>
+        </form>
+    </div>
+</body>
+</html>

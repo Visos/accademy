@@ -1,0 +1,55 @@
+<html lang="it" xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+	<h1 align="center">Project JPA</h1>
+	<nav th:insert="~{fragments/navigation :: block-navigation('Indice:')}"></nav>
+	<!--avviso thymeleaf che ci stiamo riferendo a un'altra pagina: URL di createSocio = @{/....} -->
+	<div align="center" th:if="${funzione=='list'}">
+		<a th:href="@{/createAttivita(abbID=${abbID}, socioID=${socioID})}"
+			class="buttonlike">Create Attività</a> <input type="hidden"
+			th:field="${socioID}">
+	</div>
+	<br>
+	<!--     <span th:text="${socioID}">***</span> -->
+	<div th:if="${attivita.rc}">
+		<div>
+			<table class="center">
+				<thead>
+					<tr>
+						<th>Descrizione</th>
+						<th th:if="${funzione == 'list'}">Azione</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="att : ${attivita.dati}">
+						<td th:text="${att.descrizione}"></td>
+						<td th:if="${funzione=='list'}"><a
+							th:href="@{/removeAttivitaAbbonamento(abbID=${abbID}, attID=${att.id}, socioID=${socioID})}">Remove</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<div th:if="${funzione=='remove'}" align="center">
+				<a
+					th:href="@{/forceRemoveAbbonamento(abbID=${abbID}, socioID=${socioID})}">Remove
+					Abbonamento</a> 
+					<a th:href="@{/listAbbonamenti(socioID=${socioID})}">Cancel
+					operation</a>
+			</div>
+			<div th:if="${funzione=='list'}" align="center">
+				<br> <a th:href="@{listAbbonamenti(socioID=${socioID})}">Return</a>
+			</div>
+		</div>
+	</div>
+
+	<!--  	questa parte manda il messaggio di errore nel caso in cui ci fossero errori -->
+	<div align="center" th:if="${attivita.rc == false}">
+		<span th:text="${attivita.msg}">***</span>
+	</div>
+</body>
+</html>

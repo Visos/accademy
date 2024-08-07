@@ -1,0 +1,27 @@
+<html lang="it" xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+	<h1 align="center">Project JPA</h1>
+	<nav th:insert="~{fragments/navigation :: block-navigation('Indice:')}"></nav>
+	<div class="container">
+		<form th:action="@{/saveAttivitaAbbonamento}"
+			th:object="${attivitaReq}" method="post">
+			<h3>Selezionare attività</h3>
+
+			<input type="hidden" th:field="*{abbonamentoId}"
+				th:value="${attivitaReq.abbonamentoId}" /> <input type="hidden"
+				th:field="*{socioID}" th:value="${attivitaReq.socioID}" /> <select
+				th:field="*{id}">
+				<option th:each="att : ${listAttivita.dati}" th:value="${att.id}"
+					th:text="${att.descrizione}" />
+			</select>
+
+			<button type="submit">Add attività</button>
+		</form>
+	</div>
+</body>
+</html>

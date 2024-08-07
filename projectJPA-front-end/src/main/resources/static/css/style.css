@@ -1,0 +1,164 @@
+body {
+  background-color: #eaeaea;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.navbar {
+  width: 100%;
+  background-color: #eaeaea;
+  overflow: auto;
+}
+
+
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar a:hover {
+  background-color: #f80000;
+}
+
+
+.active {
+  background-color: #04AA6D;
+}
+
+.description {
+	font-weight: 200;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+  
+}a:link, a:visited {
+  background-color: #0094d4;
+  color: white;
+  padding: 11px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+ 
+a:hover {
+  cursor: pointer;
+  color: black;
+}
+
+input:not([type="checkbox"]),
+select {
+  min-width: 15vh;
+  padding: 0.5vh;
+  border-radius: 10px;
+  border: 1px solid #4d4d4d;
+  outline: none;
+  font-weight: 200;
+  font-size: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10vh;
+  width: 100%;
+}
+
+.form_content {
+  display: flex;
+  flex-direction: row;
+  gap: 3vh;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 2vh;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid #8a8a8a;
+}
+
+th {
+  background-color: #cecece;
+  padding: 3vh;
+}
+
+.tr_alternative {
+  background-color: #e0e0e0;
+}
+
+td {
+  text-align: center;
+  padding: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+button {
+  margin-top: 3vh;
+  padding: 1vh;
+  background-color: #0094d4;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  width: 20vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonlike {
+  margin-top: 3vh;
+  padding: 1.5vh;
+  background-color: #0094d4;
+  color: #ffffff;  border: none;
+  outline: none;
+  border-radius: 50px;
+  width: 20vh;
+  font-size: 0.7em;
+  transition: all 0.3s ease-in-out;
+}
+
+main {
+    margin:150px 200px;
+}
+
+.container-error{
+	margin-top: 10px;
+	width:100%;
+	height:30px;
+	display:flex;
+	align-items:center;
+	background-color: rgba(255, 0, 0, 0.2);	
+	justify-content: center;
+	border-radius: 10px;
+	
+}
+

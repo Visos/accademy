@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project JPA</title>
+</head>
+<body>
+    <div th:fragment="block-navigation(myTitle)">
+        <h1 align="center">Project JPA</h1>
+        <div class="navbar">
+            <a th:href="@{/listSocio}">Socio</a>
+            <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/admin/listAttivita}">Attivita</a>
+            <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/admin/createUtente}">Utente</a>
+            <a th:href="@{/logout}">Logout</a>
+        </div>
+        <h2 align="center" th:text="${myTitle}">Elenco soci</h2>
+    </div>
+</body>
+</html>

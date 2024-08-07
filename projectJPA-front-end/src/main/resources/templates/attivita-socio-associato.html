@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleAtt.css">
+    <title>Project JPA</title>
+</head>
+<body>
+    <nav th:insert= "~{fragments/navigation :: block-navigation('Elenco soci abbonati')}"></nav>
+    <input type="hidden"  th:field="${attID}">
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="att : ${listNewAttivita.dati}">
+                <td th:text="${att.attivita.nome}"></td>
+                <td th:text="${att.attivita.cognome}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

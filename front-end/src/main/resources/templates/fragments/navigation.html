@@ -1,0 +1,26 @@
+<html lang="it" xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<title>Project JPA</title>
+</head>
+<body>
+
+	<!-- tutti gli elementi in thymeleaf sono indicati con th -->
+	<div th:fragment="block-navigation(myTitle)">
+		<h2 th:text="${myTitle}"></h2>
+		<div th:class="navbar">
+			<a th:href="@{/listSocio}">Elenco Soci</a>
+			<a th:href="@{/logout}">Logout</a>
+		</div>
+		<br>
+		<div th:class="navbar">
+			<a th:href="@{/admin/listAttivita}">Elenco Attività</a>
+		</div>
+
+		<!--    			la chiocciola indica un indirizzo -->
+		<!--    			il dollaro indica che è un parametro in thymeleaf -->
+	</div>
+
+</body>
+</html>

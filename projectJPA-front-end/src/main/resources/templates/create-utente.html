@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Project JPA</title>
+</head>
+<body>
+    <nav th:insert="~{fragments/navigation :: block-navigation('Creazione Utente')}"></nav>
+    <div class="container">
+        <h3 class="description">Inserire i dati</h3>
+        <div align="center">
+            <form th:action="@{/admin/saveUtente}" th:object="${req}" method="post">
+                <div>
+                    <input type="text" th:field="*{username}" placeholder="Username">
+                </div>
+                <div>
+                    <input type="password" th:field="*{password}" placeholder="Password">
+                </div>
+                <div>
+                    <select th:field="*{role}">
+                        <option value="ADMIN">Admin</option>
+                        <option value="USER">User</option>
+                    </select>
+                </div>
+                <button type="submit">Save</button>
+                <span th:text="${errorMsg}" style="color: red;">***</span>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
