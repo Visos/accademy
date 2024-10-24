@@ -1,6 +1,7 @@
 package com.betacom.jpa.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,15 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.dto.SocioViewDTO;
 import com.betacom.jpa.exception.AcademyException;
+import com.betacom.jpa.repository.IMessaggioRepository;
 import com.betacom.jpa.response.Response;
 import com.betacom.jpa.response.ResponseBase;
 import com.betacom.jpa.response.ResponseObject;
 import com.betacom.jpa.service.interfaces.IMessaggioService;
 import com.betacom.jpa.service.interfaces.ISocioService;
-import org.springframework.web.bind.annotation.RequestParam;
 
-
-
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping("/rest/socio")
 public class SocioController {
@@ -43,12 +43,8 @@ public class SocioController {
 			if (req.getcFiscale() == null)
 				throw new AcademyException(msgS.getMessaggio("socio-nocfiscale"));
 			
-			try {
-				socioS.createUpdateSocio(req);
-			} catch (Exception e) {
-				throw new AcademyException(msgS.getMessaggio("socio-cfiscale-duplicato"));
-			}
 			
+			socioS.createUpdateSocio(req);
 		} catch (AcademyException e) {
 			res.setRc(false);
 			res.setMsg(e.getMessage());
@@ -72,6 +68,8 @@ public class SocioController {
 		
 		return res;
 	}
+
+	
 	
 	@GetMapping("/list")
 	public Response<SocioViewDTO> list(Integer id, String nome, String cognome){
@@ -81,15 +79,14 @@ public class SocioController {
 		
 		return resp;
 	}
-
+	
 	@GetMapping("/getById")
-	public ResponseObject<SocioViewDTO> socioByID(@RequestParam Integer id) {
+	public ResponseObject<SocioViewDTO> getById(Integer id){
 		ResponseObject<SocioViewDTO> resp = new ResponseObject<SocioViewDTO>();
 		resp.setRc(true);
 		resp.setDati(socioS.searchById(id));
-
+		
 		return resp;
 	}
-	
 	
 }

@@ -25,6 +25,7 @@ import com.betacom.jpa.repository.ISocioRepository;
 import com.betacom.jpa.service.interfaces.IMessaggioService;
 import com.betacom.jpa.service.interfaces.ISocioService;
 
+import static com.betacom.jpa.util.Utilities.convertDateToString;
 @Service
 public class SocioServiceImpl implements ISocioService{
 	
@@ -48,7 +49,7 @@ public class SocioServiceImpl implements ISocioService{
 		if (socioI.getId() != null) {
 			Optional<Socio> mySocio = socioR.findById(socioI.getId());
 			if (mySocio.isEmpty())
-				throw new AcademyException(msgS.getMessaggio("socio-ntfnd"));
+				throw new AcademyException(msgS.getMessaggio("socio-non-trovato"));
 			socio = mySocio.get();
 		} else
 			socio = new Socio();
@@ -59,7 +60,8 @@ public class SocioServiceImpl implements ISocioService{
 		try {
 			socioR.save(socio);
 		} catch (Exception e) {
-			throw new AcademyException(msgS.getMessaggio("socio-generic" )+ e.getMessage());
+	//		throw new AcademyException(msgS.getMessaggio("socio-generico" )+ e.getMessage());
+			throw new AcademyException(msgS.getMessaggio("socio-cfiscale"));
 		}
 	}
 
@@ -99,13 +101,28 @@ public class SocioServiceImpl implements ISocioService{
 		return tranformInListDTO(lS);
 	}
 
+	@Override
+	public SocioViewDTO searchById(Integer id) {
+		Optional<Socio> soc = socioR.findById(id);
+		if (soc.isEmpty())
+			return null;
+		
+		return new SocioViewDTO(
+				soc.get().getId(),
+				soc.get().getCognome(),
+				soc.get().getNome(),
+				soc.get().getcFiscale(),
+				loadCertificatoView(soc.get().getCertificato()),
+				loadListViewAbbonamentoDTO(soc.get().getAbbonamenti()));
+		
+	}
 
 	
 	@Override
 	public void removeSocio(SocioDTO socio) throws AcademyException {
 		Optional<Socio> soc = socioR.findById(socio.getId());
 		if (soc.isEmpty())
-			throw new AcademyException(msgS.getMessaggio("socio-ntfnd"));
+			throw new AcademyException(msgS.getMessaggio("socio-non-trovato"));
 /*
 		if (soc.get().getCertificato() != null) {
 			certifR.delete(soc.get().getCertificato());
@@ -124,20 +141,7 @@ public class SocioServiceImpl implements ISocioService{
 		
 	}
 
-	@Override
-	public SocioViewDTO searchById(Integer id) {
-		Optional<Socio> optional = socioR.findById(id);
-		if (optional.isEmpty())
-			return null;
-
-		return new SocioViewDTO(
-                optional.get().getId(),
-                optional.get().getCognome(),
-                optional.get().getNome(),
-                optional.get().getcFiscale(),
-				loadCertificatoView(optional.get().getCertificato()),
-				loadListViewAbbonamentoDTO(optional.get().getAbbonamenti()));
-	}
+	
 	
 	
 	private List<SocioDTO> tranformInListDTO(List<Socio> resp){
@@ -148,7 +152,7 @@ public class SocioServiceImpl implements ISocioService{
 						s.getNome(),
 						s.getcFiscale(),
 						(s.getCertificato() != null) ? s.getCertificato().getId() : null,
-						(s.getCertificato() != null) ? s.getCertificato().getDataCertificato() : null,
+						(s.getCertificato() != null) ? convertDateToString(s.getCertificato().getDataCertificato()) : null,
 						(s.getCertificato() != null) ? (s.getCertificato().getTipo() ? "Agonistico" : "Normale") : null,
 						(s.getAbbonamenti() != null) ? transformAbboInDTO(s.getAbbonamenti()) : null
 						)) 
@@ -177,7 +181,7 @@ public class SocioServiceImpl implements ISocioService{
 			return new CertificatoViewDTO();
 		CertificatoViewDTO c = new CertificatoViewDTO();
 		c.setId(certificato.getId());
-		c.setDataCertificato(certificato.getDataCertificato());
+		c.setDataCertificato(convertDateToString(certificato.getDataCertificato()));
 		c.setTipo((certificato.getTipo() ? "Agonistico" : "Normale"));
 
 		return c;
@@ -192,4 +196,10 @@ public class SocioServiceImpl implements ISocioService{
 						))
 				.collect(Collectors.toList());
 	}
+
+	
+
+
+
+
 }

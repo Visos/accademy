@@ -1,6 +1,11 @@
 package com.betacom.jpa.pojo;
 
 import java.util.List;
+import java.util.Set;
+
+import org.hibernate.FetchMode;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.ManyToAny;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

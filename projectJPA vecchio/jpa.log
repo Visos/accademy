@@ -1,0 +1,46 @@
+2024-09-03T10:05:00.237+02:00  INFO 8768 --- [projectJPA] [main] com.betacom.jpa.JpaApplication           : Starting JpaApplication using Java 17.0.10 with PID 8768 (C:\Users\Betacom\Documents\GitHub\accademy\projectJPA\target\classes started by Betacom in C:\Users\Betacom\Documents\GitHub\accademy\projectJPA)
+2024-09-03T10:05:00.253+02:00 DEBUG 8768 --- [projectJPA] [main] com.betacom.jpa.JpaApplication           : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-09-03T10:05:00.256+02:00  INFO 8768 --- [projectJPA] [main] com.betacom.jpa.JpaApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-09-03T10:05:02.200+02:00  INFO 8768 --- [projectJPA] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-03T10:05:02.448+02:00  INFO 8768 --- [projectJPA] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 227 ms. Found 7 JPA repository interfaces.
+2024-09-03T10:05:03.823+02:00  INFO 8768 --- [projectJPA] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-09-03T10:05:03.861+02:00  INFO 8768 --- [projectJPA] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-03T10:05:03.863+02:00  INFO 8768 --- [projectJPA] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-03T10:05:04.087+02:00  INFO 8768 --- [projectJPA] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-03T10:05:04.090+02:00  INFO 8768 --- [projectJPA] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3646 ms
+2024-09-03T10:05:04.465+02:00  INFO 8768 --- [projectJPA] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-03T10:05:05.142+02:00  INFO 8768 --- [projectJPA] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e91af20
+2024-09-03T10:05:05.148+02:00  INFO 8768 --- [projectJPA] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-03T10:05:05.255+02:00  INFO 8768 --- [projectJPA] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-03T10:05:05.417+02:00  INFO 8768 --- [projectJPA] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-09-03T10:05:05.610+02:00  INFO 8768 --- [projectJPA] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-03T10:05:06.530+02:00  INFO 8768 --- [projectJPA] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-03T10:05:10.067+02:00  INFO 8768 --- [projectJPA] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-03T10:05:10.075+02:00  INFO 8768 --- [projectJPA] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T10:05:10.874+02:00  INFO 8768 --- [projectJPA] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-03T10:05:12.767+02:00  WARN 8768 --- [projectJPA] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-03T10:05:13.895+02:00  INFO 8768 --- [projectJPA] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-09-03T10:05:13.922+02:00  INFO 8768 --- [projectJPA] [main] com.betacom.jpa.JpaApplication           : Started JpaApplication in 14.818 seconds (process running for 16.305)
+2024-09-03T10:05:52.378+02:00  INFO 13584 --- [projectJPA] [main] com.betacom.jpa.JpaApplication           : Starting JpaApplication using Java 17.0.10 with PID 13584 (C:\Users\Betacom\Documents\GitHub\accademy\projectJPA\target\classes started by Betacom in C:\Users\Betacom\Documents\GitHub\accademy\projectJPA)
+2024-09-03T10:05:52.381+02:00 DEBUG 13584 --- [projectJPA] [main] com.betacom.jpa.JpaApplication           : Running with Spring Boot v3.2.8, Spring v6.1.11
+2024-09-03T10:05:52.383+02:00  INFO 13584 --- [projectJPA] [main] com.betacom.jpa.JpaApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-09-03T10:05:53.634+02:00  INFO 13584 --- [projectJPA] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-03T10:05:53.801+02:00  INFO 13584 --- [projectJPA] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 7 JPA repository interfaces.
+2024-09-03T10:05:54.796+02:00  INFO 13584 --- [projectJPA] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-09-03T10:05:54.821+02:00  INFO 13584 --- [projectJPA] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-03T10:05:54.822+02:00  INFO 13584 --- [projectJPA] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-03T10:05:54.961+02:00  INFO 13584 --- [projectJPA] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-03T10:05:54.962+02:00  INFO 13584 --- [projectJPA] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2473 ms
+2024-09-03T10:05:55.213+02:00  INFO 13584 --- [projectJPA] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-03T10:05:55.682+02:00  INFO 13584 --- [projectJPA] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@629e8212
+2024-09-03T10:05:55.684+02:00  INFO 13584 --- [projectJPA] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-03T10:05:55.782+02:00  INFO 13584 --- [projectJPA] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-03T10:05:55.905+02:00  INFO 13584 --- [projectJPA] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.9.Final
+2024-09-03T10:05:55.974+02:00  INFO 13584 --- [projectJPA] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-03T10:05:56.419+02:00  INFO 13584 --- [projectJPA] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-03T10:05:58.204+02:00  INFO 13584 --- [projectJPA] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-03T10:05:58.249+02:00  INFO 13584 --- [projectJPA] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T10:05:58.752+02:00  INFO 13584 --- [projectJPA] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-03T10:05:59.704+02:00  WARN 13584 --- [projectJPA] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-03T10:06:00.388+02:00  INFO 13584 --- [projectJPA] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-09-03T10:06:00.409+02:00  INFO 13584 --- [projectJPA] [main] com.betacom.jpa.JpaApplication           : Started JpaApplication in 8.774 seconds (process running for 9.352)

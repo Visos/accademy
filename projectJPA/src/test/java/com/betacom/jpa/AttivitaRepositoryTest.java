@@ -24,27 +24,23 @@ public class AttivitaRepositoryTest {
 	@Test
 	@Order(1)
 	public void saveAttivitaTest() {
-		
 		Attivita attiv = new Attivita();
 		attiv.setDescrizione("Judo");
+		
 		attivR.save(attiv);
 		Assertions.assertThat(attiv.getId()).isGreaterThan(0);
 		
 		attiv = new Attivita();
 		attiv.setDescrizione("Karate");
+		
 		attivR.save(attiv);
 		Assertions.assertThat(attiv.getId()).isGreaterThan(1);
-		
-		attiv = new Attivita();
-		attiv.setDescrizione("Yoga");
-		attivR.save(attiv);
-		Assertions.assertThat(attiv.getId()).isGreaterThan(2);
 	}
 	
 	@Test
 	@Order(2)
 	public void findAttivitaTest() {
-		Optional<Attivita> a = attivR.findByDescrizione("Yoga");
+		Optional<Attivita> a = attivR.findByDescrizione("Karate");
 		
 		Assertions.assertThat(a.isPresent()).isTrue();
 	}

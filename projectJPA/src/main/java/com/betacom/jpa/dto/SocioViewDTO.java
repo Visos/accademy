@@ -68,4 +68,11 @@ public class SocioViewDTO {
 	}
 
 
+	@Override
+	public String toString() {
+		return "SocioViewDTO [id=" + id + ", cognome=" + cognome + ", nome=" + nome + ", cFiscale=" + cFiscale
+				+ ", certificato=" + certificato + ", abbonamenti=" + abbonamenti + "]";
+	}
+
+
 }

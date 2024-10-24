@@ -1,5 +1,6 @@
 package com.betacom.jpa.dto;
 
+
 public class AttivitaDTO {
 	private Integer id;
 	private String  descrizione;

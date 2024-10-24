@@ -2,18 +2,19 @@ package com.betacom.jpa;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.util.List;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.betacom.jpa.dto.SocioDTO;
+import com.betacom.jpa.dto.SocioViewDTO;
 import com.betacom.jpa.service.interfaces.ISocioService;
 
 @SpringBootTest
-@RunWith(SpringRunner.class)
 public class SocioServiceTest {
 	
 	@Autowired
@@ -31,7 +32,10 @@ public class SocioServiceTest {
 			
 			socioS.createUpdateSocio(soc);
 			
-			Assertions.assertThat(socioS.listSocio(1, null, null).get(0).getCognome()).isEqualTo("Verdi");
+			List<SocioViewDTO> lS = socioS.listSocio(1, null, null);
+			lS.forEach(s -> System.out.println(s.toString()));
+			
+			Assertions.assertThat(lS.get(0).getCognome()).isEqualTo("Verdi");
 			
 			soc = new SocioDTO();
 			soc.setNome("Giovanni");

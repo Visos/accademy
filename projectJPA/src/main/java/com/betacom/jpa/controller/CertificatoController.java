@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.betacom.jpa.dto.CertificatoDTO;
+import com.betacom.jpa.dto.SocioDTO;
 import com.betacom.jpa.exception.AcademyException;
 import com.betacom.jpa.request.CertificatoReq;
 import com.betacom.jpa.response.Response;

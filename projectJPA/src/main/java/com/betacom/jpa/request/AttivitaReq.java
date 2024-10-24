@@ -5,6 +5,7 @@ public class AttivitaReq {
 	private String  descrizione;
 	private Integer abbonamentoID;
 	private String[] attivita;
+	private Integer socioID;
 
 	public Integer getId() {
 		return id;
@@ -29,6 +30,12 @@ public class AttivitaReq {
 	}
 	public void setAttivita(String[] attivita) {
 		this.attivita = attivita;
+	}
+	public Integer getSocioID() {
+		return socioID;
+	}
+	public void setSocioID(Integer socioID) {
+		this.socioID = socioID;
 	}
 
 }

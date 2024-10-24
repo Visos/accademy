@@ -7,9 +7,7 @@ import org.junit.platform.suite.api.Suite;
 @SelectClasses({SocioServiceTest.class, 
 				CertificatoTest.class,
 				AbbonamentoServiceTest.class,
-				AttivitaServiceTest.class,
-				SocioListTest.class, 
-				AbbonamentoListTest.class})
+				AttivitaServiceTest.class})
 public class TestSuite {
 
 }

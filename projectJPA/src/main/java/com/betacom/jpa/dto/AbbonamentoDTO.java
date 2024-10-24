@@ -1,5 +1,7 @@
 package com.betacom.jpa.dto;
 
+
+
 public class AbbonamentoDTO {
 	private Integer id;
 	private String dataIscrizione;

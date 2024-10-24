@@ -17,39 +17,84 @@ import com.betacom.jpa.service.interfaces.IUtenteService;
 import com.betacom.jpa.util.Roles;
 
 @Service
-public class UtenteServiceImpl implements IUtenteService {
+public class UtenteServiceImpl implements IUtenteService{
 
-    @Autowired
-    IUtenteRepository utenteRep;
+	@Autowired
+	IUtenteRepository utenteR;
+	
+	@Autowired
+	IMessaggioService msgS;
+	
+	@Override
+	public void createUtente(UtenteReq req) throws AcademyException {
+		Utente ut = new Utente();
+		if (req.getId() != null) {
+			Optional<Utente> u = utenteR.findById(req.getId());
+			if (u.isEmpty()) {
+				throw new AcademyException(msgS.getMessaggio("user-exist"));
+			}
+			ut = u.get();
+		} else {
+			Optional<Utente> u = utenteR.findByUserName(req.getUserName().trim());
+			if (!u.isEmpty()) {
+				throw new AcademyException(msgS.getMessaggio("user-exist"));
+			}
+		}
+		ut.setUserName(req.getUserName());
+		ut.setPwd(req.getPwd());
+		ut.setRole(Roles.valueOf(req.getRole()));   
+		
+		utenteR.save(ut);
+	}
 
-    @Autowired
-    IMessaggioService msgS;
-    @Override
-    public void createUtente(UtenteReq req) throws AcademyException{
-        Optional<Utente> utente = utenteRep.findByUsername(req.getUsername().trim());
+	@Override
+	public List<UtenteDTO> getAll() {
+		List<Utente> r = utenteR.findAll();
+		return r.stream()
+				.map( s -> new UtenteDTO(
+						s.getId(),
+						s.getUserName(),
+						s.getPwd(),
+						s.getRole().toString())
+						).collect(Collectors.toList());
+	}
 
-        if (utente.isPresent()) {
-            throw new AcademyException(msgS.getMessaggio("user-exist"));
-        }
-            
-        Utente u = new Utente();
-        u.setUsername(req.getUsername());
-        u.setPassword(req.getPassword());
-        u.setRole(Roles.valueOf(req.getRole()));
+	@Override
+	public UtenteDTO findUtente(String userName) throws AcademyException {
+		Optional<Utente> u = utenteR.findByUserName(userName);
+		if (u.isEmpty()) {
+			throw new AcademyException(msgS.getMessaggio("user-exist"));
+		}
+		return new UtenteDTO(u.get().getId(),
+				u.get().getUserName(),
+				u.get().getPwd(), 
+				u.get().getRole().toString());
+	}
 
-        utenteRep.save(u);
-    }
-    @Override
-    public List<UtenteDTO> getAll() {
+	@Override
+	public UtenteDTO findUtenteById(Integer id) throws AcademyException {
+		Optional<Utente> u = utenteR.findById(id);
+		if (u.isEmpty()) {
+			throw new AcademyException(msgS.getMessaggio("user-exist"));
+		}
+		return new UtenteDTO(u.get().getId(),
+				u.get().getUserName(),
+				u.get().getPwd(), 
+				u.get().getRole().toString());
+	}
 
-        List<Utente> utenti = utenteRep.findAll();
-        return utenti.stream()
-                .map(u -> new UtenteDTO(
-                    u.getId(), 
-                    u.getUsername(), 
-                    u.getPassword(), 
-                    u.getRole().name()))
-                .collect(Collectors.toList());
-    }
+	@Override
+	public UtenteDTO signIn(String user, String pwd) throws AcademyException {
+		Optional<Utente> u = utenteR.findByUserNameAndPwd(user.trim(), pwd.trim());
+		if (u.isEmpty()) {
+			throw new AcademyException(msgS.getMessaggio("invalid usr/pwd"));
+		}
+		return new UtenteDTO(u.get().getId(),
+				u.get().getUserName(),
+				u.get().getPwd(), 
+				u.get().getRole().toString());
+	}
 
+
+	
 }

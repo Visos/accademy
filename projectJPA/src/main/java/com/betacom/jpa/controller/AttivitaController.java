@@ -9,15 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.betacom.jpa.dto.AttivitaDTO;
-import com.betacom.jpa.dto.AttivitaViewDTO;
 import com.betacom.jpa.exception.AcademyException;
+import com.betacom.jpa.request.AbbonamentoReq;
 import com.betacom.jpa.request.AttivitaReq;
 import com.betacom.jpa.response.Response;
 import com.betacom.jpa.response.ResponseBase;
 import com.betacom.jpa.response.ResponseObject;
 import com.betacom.jpa.service.interfaces.IAttivitaService;
 import com.betacom.jpa.service.interfaces.IMessaggioService;
+import com.betacom.jpa.dto.AttivitaDTO;
+import com.betacom.jpa.dto.AttivitaViewDTO;
+import com.betacom.jpa.dto.SocioDTO;
 
 @RestController
 @RequestMapping("/rest/attivita")
@@ -31,8 +33,8 @@ public class AttivitaController {
 	
 	@PostMapping("/create")
 	public ResponseBase create(@RequestBody (required = true)  AttivitaReq req) {
-		ResponseBase resp = new ResponseBase();
-		resp.setRc(true);
+		ResponseBase res = new ResponseBase();
+		res.setRc(true);
 		
 		try {
 			if (req.getDescrizione() == null)
@@ -40,51 +42,53 @@ public class AttivitaController {
 			
 			attS.create(req);
 		} catch (AcademyException e) {
-			resp.setRc(false);
-			resp.setMsg(e.getMessage());
+			res.setRc(false);
+			res.setMsg(e.getMessage());
 		}
 		
-		return resp;
+		return res;
 	}	
 
 	@PostMapping("/createAttivitaAbbo")
 	public ResponseBase createAttivitaAbbo(@RequestBody (required = true)  AttivitaReq req) {
-		ResponseBase resp = new ResponseBase();
-		resp.setRc(true);
-		
-		try {
-			attS.createAttivitaAbbonamento(req);
-		} catch (AcademyException e) {
-			resp.setRc(false);
-			resp.setMsg(e.getMessage());
-		}
-		
-		return resp;
-	}	
-
-	@PostMapping("/removeAttivitaAbbo")
-	public ResponseBase removeAttivitaAbbo(@RequestBody (required = true)  AttivitaReq req) {
-		ResponseBase resp = new ResponseBase();
-		resp.setRc(true);
-		
-		try {
-			attS.removeAttivitaAbbonamento(req);
-		} catch (AcademyException e) {
-			resp.setRc(false);
-			resp.setMsg(e.getMessage());
-		}
-		
-		return resp;
-	}	
-
-
-	@DeleteMapping("/removeAttivita")
-	public ResponseBase removeAttivita(@RequestBody (required = true)  AttivitaReq req) {
 		ResponseBase res = new ResponseBase();
 		res.setRc(true);
 		
 		try {
-			attS.removeAttivita(req);
+			attS.createAttivitaAbbonamento(req);
+		} catch (AcademyException e) {
+			res.setRc(false);
+			res.setMsg(e.getMessage());
+		}
+		
+		return res;
+	}	
+
+	@PostMapping("/removeAttivitaAbbo")
+	public ResponseBase removeAttivitaAbbo(@RequestBody (required = true)  AttivitaReq req) {
+		ResponseBase res = new ResponseBase();
+		res.setRc(true);
+		
+		try {
+			attS.removeAttivitaAbbonamento(req);
+		} catch (AcademyException e) {
+			res.setRc(false);
+			res.setMsg(e.getMessage());
+		}
+		
+		return res;
+	}	
+
+
+	@PostMapping("/removeAttivita")
+	public Response<SocioDTO> removeAttivita(@RequestBody (required = true)  AttivitaReq req) {
+		Response<SocioDTO> res = new Response<SocioDTO>();
+		res.setRc(true);
+		
+		try {
+			res.setDati(attS.removeAttivita(req));
+			if (!res.getDati().isEmpty())
+				res.setRc(false);
 		} catch (AcademyException e) {
 			res.setRc(false);
 			res.setMsg(e.getMessage());
@@ -94,67 +98,53 @@ public class AttivitaController {
 	}	
 	@GetMapping("/list")
 	public ResponseObject<AttivitaViewDTO> list(@RequestParam("id")Integer id){
-		ResponseObject<AttivitaViewDTO> resp = new ResponseObject<AttivitaViewDTO>();
-		resp.setRc(true);
+		ResponseObject<AttivitaViewDTO> r = new ResponseObject<AttivitaViewDTO>();
+		r.setRc(true);
 		
 		try {
-			resp.setDati(attS.list(id));
+			r.setDati(attS.list(id));
 		} catch (AcademyException e) {
-			resp.setRc(false);
-			resp.setMsg(e.getMessage());
+			r.setRc(false);
+			r.setMsg(e.getMessage());
 		}
-		return resp;
+		return r;
 	}
 
 	
 	@GetMapping("/listAll")
 	public Response<AttivitaDTO> listAll(){
-		Response<AttivitaDTO> resp = new Response<AttivitaDTO>();
-		resp.setRc(true);
-		resp.setDati(attS.listAll());
+		Response<AttivitaDTO> r = new Response<AttivitaDTO>();
+		r.setRc(true);
+		r.setDati(attS.listAll());
 		
-		return resp;
+		return r;
 	}
 
+	
 	@GetMapping("/listByAbbonamento")
 	public Response<AttivitaDTO> listByAbbonamento(Integer id){
-		Response<AttivitaDTO> resp = new Response<AttivitaDTO>();
-		resp.setRc(true);
+		Response<AttivitaDTO> r = new Response<AttivitaDTO>();
+		r.setRc(true);
 		try {
-			resp.setDati(attS.listByAbbonamento(id));
-		} catch (Exception e) {
-			resp.setRc(false);
-			resp.setMsg(e.getMessage());
+			r.setDati(attS.listByAbbonamento(id));
+		} catch (AcademyException e) {
+			r.setRc(false);
+			r.setMsg(e.getMessage());
 		}
-		return resp;
+		return r;
 	}
 
-	@GetMapping("/listAllNoAbb")
-    public Response<AttivitaDTO> listAllNoAbb(Integer id){
-		Response<AttivitaDTO> resp = new Response<AttivitaDTO>();
-		resp.setRc(true);
+	@GetMapping("/listAttivitaNonAbbonamento")
+	public Response<AttivitaDTO> listAttivitaNonAbbonamento(Integer id){
+		Response<AttivitaDTO> r = new Response<AttivitaDTO>();
+		r.setRc(true);
 		try {
-			resp.setDati(attS.listAllNoAbb(id));
-		} catch (Exception e) {
-			resp.setRc(false);
-			resp.setMsg(e.getMessage());
+			r.setDati(attS.listAttivitaNonAbbonamento(id));
+		} catch (AcademyException e) {
+			r.setRc(false);
+			r.setMsg(e.getMessage());
 		}
-		return resp;
+		return r;
 	}
 
-	@GetMapping("/attivitaByID")
-	public ResponseObject<AttivitaDTO> attivitaByID(@RequestParam Integer id) {
-		
-		ResponseObject<AttivitaDTO> resp = new ResponseObject<AttivitaDTO>();
-		resp.setRc(true);
-		try {
-			resp.setDati(attS.attivitaByID(id));
-		} catch (Exception e) {
-			resp.setRc(false);
-			resp.setMsg(e.getMessage());
-		}
-		return resp;
-
-	}
-	
 }

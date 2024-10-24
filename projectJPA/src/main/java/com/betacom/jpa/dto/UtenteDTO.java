@@ -1,47 +1,48 @@
 package com.betacom.jpa.dto;
 
 public class UtenteDTO {
+	private Integer id;
 
-    private Integer id;
-    private String username;
-    private String password;
-    private String role;
-
-    public UtenteDTO() {
-        super();
-    }
-
-    public UtenteDTO(Integer id, String username, String password, String role) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.role = role;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public String getUsername() {
-        return username;
-    }
-    public void setUsername(String username) {
-        this.username = username;
-    }
-    public String getPassword() {
-        return password;
-    }
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    public String getRole() {
-        return role;
-    }
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    
+	private String userName;
+	private String pwd;
+	private String role;
+	
+	public UtenteDTO() {
+		super();
+	}
+	public UtenteDTO(Integer id, String userName, String pwd, String role) {
+		super();
+		this.id = id;
+		this.userName = userName;
+		this.pwd = pwd;
+		this.role = role;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	
+	
+	
 }

@@ -21,7 +21,7 @@
         id integer not null auto_increment,
         socio_id integer,
         tipo bit,
-        data_certificato varchar(10),
+        data_certificato datetime(6),
         primary key (id)
     ) engine=InnoDB;
 
@@ -38,6 +38,15 @@
         primary key (code, lang)
     ) engine=InnoDB;
 
+    create table persone (
+        id integer not null auto_increment,
+        cognome varchar(255),
+        color varchar(255),
+        email varchar(255),
+        nome varchar(255),
+        primary key (id)
+    ) engine=InnoDB;
+
     create table socio (
         id integer not null auto_increment,
         codice_fiscale varchar(17) not null,
@@ -46,11 +55,19 @@
         primary key (id)
     ) engine=InnoDB;
 
+    create table `users-angular` (
+        id integer not null auto_increment,
+        role tinyint check (role between 0 and 2),
+        pwd varchar(255),
+        user_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB;
+
     create table utente (
         id integer not null auto_increment,
-        role tinyint check (role between 0 and 1),
-        password varchar(255),
-        username varchar(255),
+        role tinyint check (role between 0 and 2),
+        pwd varchar(255),
+        user_name varchar(255),
         primary key (id)
     ) engine=InnoDB;
 

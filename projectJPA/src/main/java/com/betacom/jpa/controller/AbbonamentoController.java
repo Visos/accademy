@@ -36,22 +36,39 @@ public class AbbonamentoController {
 		return res;
 	}	
 
-	@PostMapping("/delete")
-	public ResponseBase delete(@RequestBody (required = true) Integer id) {
-		
+	@PostMapping("/remove")
+	public ResponseBase remove(@RequestBody (required = true)  Integer id) {
 		ResponseBase res = new ResponseBase();
 		res.setRc(true);
+		
 		try {
 			abboS.removeAbbonamento(id);
-		} catch (Exception e) {
+			
+		} catch (AcademyException e) {
 			res.setRc(false);
 			res.setMsg(e.getMessage());
 		}
 		
 		return res;
-	}
-	
+	}	
 
+	@PostMapping("/forseRemove")
+	public ResponseBase forseRemove(@RequestBody (required = true)  Integer id) {
+		ResponseBase res = new ResponseBase();
+		res.setRc(true);
+		
+		try {
+			abboS.forseRemoveAbbonamento(id);
+			
+		} catch (AcademyException e) {
+			res.setRc(false);
+			res.setMsg(e.getMessage());
+		}
+		
+		return res;
+	}	
+
+	
 	@GetMapping("/list")
 	public Response<AbbonamentoViewDTO> list(Integer id){
 		Response<AbbonamentoViewDTO> res = new Response<AbbonamentoViewDTO>();
@@ -64,10 +81,12 @@ public class AbbonamentoController {
 		}
 		
 		return res;
+		
+		
 	}
-	
+
 	@GetMapping("/listBySocio")
-    public Response<AbbonamentoViewDTO> listBySocio(Integer id){
+	public Response<AbbonamentoViewDTO> listBySocio(Integer id){
 		Response<AbbonamentoViewDTO> res = new Response<AbbonamentoViewDTO>();
 		res.setRc(true);
 		try {
@@ -76,23 +95,11 @@ public class AbbonamentoController {
 			res.setRc(false);
 			res.setMsg(e.getMessage());
 		}
+		
 		return res;
+		
+		
 	}
 
-	@PostMapping("/forseRemove")
-	public ResponseBase postMethodName(@RequestBody Integer id) {
-		
-		ResponseBase resp = new ResponseBase();
-		resp.setRc(true);
-		try {
-			abboS.forseRemoveAbbonamento(id);
-		} catch (Exception e) {
-			resp.setRc(false);
-			resp.setMsg(e.getMessage());
-		}
-		
-		return resp;
-	}
 	
-
 }

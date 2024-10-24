@@ -1,5 +1,7 @@
 package com.betacom.jpa.pojo;
 
+import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,7 +21,7 @@ public class Certificato {
 	private Boolean tipo; // false normale , true agonistico
 	
 	@Column(length=10, name="data_certificato")
-	private String dataCertificato;
+	private Date dataCertificato;
 
 	@OneToOne
 	@JoinColumn(
@@ -45,11 +47,11 @@ public class Certificato {
 		this.tipo = tipo;
 	}
 
-	public String getDataCertificato() {
+	public Date getDataCertificato() {
 		return dataCertificato;
 	}
 
-	public void setDataCertificato(String dataCertificato) {
+	public void setDataCertificato(Date dataCertificato) {
 		this.dataCertificato = dataCertificato;
 	}
 
